@@ -551,6 +551,15 @@
     .pcard:not(.star) .pcard-note { color: var(--muted); }
     .pcard.star .pcard-note { color: rgba(255,255,255,0.65); }
 
+    .pricing-custom {
+      display: flex; align-items: center; justify-content: space-between; gap: 28px;
+      background: var(--coral-lt); border: 1px solid var(--coral-mid);
+      border-radius: var(--r-lg); padding: 30px 40px; margin-top: 22px;
+    }
+    .pricing-custom-text h3 { font-size: 1.1rem; margin-bottom: 4px; }
+    .pricing-custom-text p { color: var(--muted); font-size: 0.9rem; margin: 0; line-height: 1.5; }
+    .pricing-custom .btn { flex-shrink: 0; }
+
     .pricing-foot {
       text-align: center; color: var(--muted);
       font-size: 0.86rem; margin-top: 32px; line-height: 1.6;
@@ -589,18 +598,18 @@
     }
     .sq-visual {
       width: 190px; height: 112px;
-      background: var(--ink);
+      background: var(--coral);
       border-radius: 12px;
       margin: 0 auto 28px;
       display: flex; flex-direction: column;
       align-items: center; justify-content: center; gap: 8px;
       box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-      border: 1px solid rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
     }
     .sq-visual-logo { width: 52px; height: 52px; }
     .sq-visual-txt {
       font-family: var(--serif); font-size: 0.68rem;
-      letter-spacing: 2.5px; color: rgba(255,255,255,0.55);
+      letter-spacing: 2.5px; color: rgba(255,255,255,0.92);
     }
     .promise-card h3 { color: #fff; margin-bottom: 12px; }
     .promise-card p { color: rgba(255,255,255,0.82); font-size: 0.9rem; line-height: 1.72; }
@@ -628,7 +637,7 @@
     }
     .founder:first-child { border-top: 1px solid var(--border); }
     .founder-av {
-      width: 52px; height: 52px; border-radius: 50%;
+      width: 88px; height: 88px; border-radius: 50%;
       background: var(--coral-lt); color: var(--coral);
       font-family: var(--serif); font-size: 1.1rem; font-weight: 600;
       display: flex; align-items: center; justify-content: center;
@@ -925,6 +934,13 @@
       .pricing-grid { max-width: 100%; }
       .pcard { padding: 32px 22px; }
       .pcard .btn { width: 100%; justify-content: center; white-space: normal; }
+
+      /* Pricing: custom-plan strip stacks on mobile */
+      .pricing-custom {
+        flex-direction: column; align-items: stretch; text-align: center;
+        padding: 28px 24px;
+      }
+      .pricing-custom .btn { width: 100%; justify-content: center; }
 
       /* Promise */
       .promise-grid { gap: 28px; }
@@ -1462,6 +1478,17 @@
 
     </div>
 
+    <div class="pricing-custom reveal">
+      <div class="pricing-custom-text">
+        <h3>Something larger?</h3>
+        <p>A villa, a bigger unit, or more than one property to manage. We'll build a plan around it, together.</p>
+      </div>
+      <a href="https://wa.me/254798913341?text=Hi%2C%20I%20have%20a%20larger%20property%20and%20I%27d%20like%20to%20talk%20about%20a%20custom%20plan."
+         class="btn btn-coral">
+        <svg width="14" height="14"><use href="#ico-wa"/></svg> Talk to us
+      </a>
+    </div>
+
     <p class="pricing-foot">
       All plans are covered by a standard service agreement. New clients pay a one-month refundable security deposit on signing, held against any outstanding invoices.<br>
       Either party may exit with 30 days' written notice. Ad-hoc cleans, deep cleans, carpet and laundry services quoted separately.
@@ -1481,7 +1508,7 @@
         <span class="eyebrow eyebrow-light">Our promise</span>
         <h2>The Squeaky Clean Standard.</h2>
         <p>Every checkout clean ends the same way: a Squeaky Clean tent card placed on the table, and before-and-after photos in your WhatsApp before our team leaves the building. Not a promise for later – within 15 minutes of the job being done.</p>
-        <p>This is The Standard. Every property. Every clean. No exceptions.</p>
+        <p>This is The Standard. Every property. Every checkout. No exceptions.</p>
 
         <div class="pillars">
           <div class="pillar">
@@ -1530,8 +1557,8 @@
           <span class="sq-visual-txt">★ SQUEAKY CLEAN ★</span>
         </div>
         <h3>The tent card on the table.</h3>
-        <p>Every checkout clean ends with a Squeaky Clean tent card – folded into an inverted V, coral matte with a spot UV finish – placed on the table. Front: <em>★ Squeaky Clean ★</em> and the date cleaned. Back: <em>"This space was professionally cleaned and prepared for your arrival by The Host Standard. Your host has chosen The Host Standard to care for this property."</em></p>
-        <p>Maintenance visits get a different card – smaller, cream stock, same branding. It reads <em>Refreshed.</em> on the front, with a simple note of what was done that day on the back. Guests on longer stays see it as attentive housekeeping. When a new guest checks in to the full coral tent card, its weight is intact – because it was never diluted.</p>
+        <p>Every checkout ends with a coral card standing on the table, telling your guest the space was cleaned and prepared just for their arrival. First impressions happen in the first sixty seconds. This is ours.</p>
+        <p>Guests staying longer see a quieter version between cleans, a cream card confirming the space was refreshed while they were out. It reassures without interrupting, so by the time a new guest checks in, that first coral card still lands the way it should.</p>
         <div class="aside-note">
           Need cleaning supplies? We can source and deliver what your unit needs – linen, cleaning products, guest amenities – invoiced as an add-on. Just let us know.
         </div>
@@ -1557,7 +1584,7 @@
 
         <div class="founders">
           <div class="founder">
-            <img src="assets/cindy-headshot-opt.jpg" alt="Cindy, Partnerships Lead and Co-founder" class="founder-av" width="52" height="52">
+            <img src="assets/cindy-headshot-opt.jpg" alt="Cindy, Partnerships Lead and Co-founder" class="founder-av" width="88" height="88">
             <div>
               <h4>Cindy</h4>
               <div class="founder-role">Partnerships Lead · Co-founder</div>
@@ -1565,10 +1592,10 @@
             </div>
           </div>
           <div class="founder">
-            <img src="assets/christina-headshot-opt.jpg" alt="Christina Moseti, Guest Relations Lead and Co-founder" class="founder-av" width="52" height="52">
+            <img src="assets/christina-headshot-opt.jpg" alt="Christina Moseti, Guest Experience Lead and Co-founder" class="founder-av" width="88" height="88">
             <div>
               <h4>Christina Moseti</h4>
-              <div class="founder-role">Guest Relations Lead · Co-founder</div>
+              <div class="founder-role">Guest Experience Lead · Co-founder</div>
               <p>Six years cleaning and running operations across up to eleven short-term rental properties in Nairobi. Christina knows exactly what a proper turnover takes – and what corners look like when they've been cut. She leads every team, manages every schedule, and signs off on every clean.</p>
             </div>
           </div>
@@ -1901,7 +1928,7 @@
       },
       "founder": [
         {"@type": "Person", "name": "Cindy", "jobTitle": "Partnerships Lead"},
-        {"@type": "Person", "name": "Christina Moseti", "jobTitle": "Guest Relations Lead"}
+        {"@type": "Person", "name": "Christina Moseti", "jobTitle": "Guest Experience Lead"}
       ]
     },
     {

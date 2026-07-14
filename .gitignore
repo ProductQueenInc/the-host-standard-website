@@ -6,6 +6,7 @@
 
 # Business/legal docs — never commit these
 docs/
+Documentation/
 about.md
 The_Host_Standard_SEO_Strategy_2026.docx
 The_Host_Standard_Shareholders_Agreement.docx
