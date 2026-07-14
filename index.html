@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>The Host Standard | Professional Short-Term Rental Cleaning in Nairobi</title>
+  <title>The Host Standard | Airbnb &amp; Short-Term Rental Cleaning Nairobi</title>
   <meta name="description" content="Professional Airbnb and short-term rental cleaning for Nairobi hosts. Uniformed teams, every clean documented and photographed. Monthly subscriptions from KES 15,000. Serving Westlands, Kilimani, Lavington, Parklands &amp; Kileleshwa.">
   <meta name="keywords" content="Airbnb cleaning Nairobi, Airbnb turnover cleaning Nairobi, short term rental cleaning Nairobi, Airbnb host services Nairobi, property cleaning Westlands Kilimani">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://thehoststandard.co.ke/">
+  <link rel="canonical" href="https://www.thehoststandard.co.ke/">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -20,7 +20,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="The Host Standard | Professional Short-Term Rental Cleaning in Nairobi">
   <meta property="og:description" content="Every checkout, guest-ready. Uniformed teams, every clean documented, one monthly subscription. Nairobi's professional cleaning service for Airbnb and short-term rental hosts.">
-  <meta property="og:url" content="https://thehoststandard.co.ke/">
+  <meta property="og:url" content="https://www.thehoststandard.co.ke/">
   <meta property="og:locale" content="en_KE">
   <meta property="og:image" content="https://thehoststandard.co.ke/assets/og-image.jpg">
   <meta property="og:image:width" content="1200">
@@ -686,12 +686,24 @@
     .reviews-track::-webkit-scrollbar { height: 6px; }
     .reviews-track::-webkit-scrollbar-thumb { background: var(--coral-mid); border-radius: var(--r-full); }
     .review-card {
-      flex: 0 0 auto; width: 340px; aspect-ratio: 16 / 9;
+      flex: 0 0 auto; width: 340px;
       border-radius: var(--r-md); overflow: hidden;
       border: 1px solid var(--border); box-shadow: var(--sh-xs);
-      scroll-snap-align: start; background: #b5433f;
+      scroll-snap-align: start; background: #fff;
+      display: flex; flex-direction: column;
     }
-    .review-card img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .review-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .review-card blockquote {
+      padding: 18px 20px 20px; flex: 1;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .review-card blockquote p {
+      font-size: 0.9rem; line-height: 1.65; color: var(--text); flex: 1;
+    }
+    .review-card blockquote footer {
+      font-size: 0.8rem; color: var(--muted);
+    }
+    .review-card blockquote cite { font-style: normal; font-weight: 600; color: var(--text); }
     .reviews-hint {
       text-align: center; color: var(--muted); font-size: 0.82rem;
       margin-top: 4px;
@@ -1652,17 +1664,95 @@
     </div>
 
     <div class="reviews-track">
-      <div class="review-card reveal"><img src="assets/reviews/review-01.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
-      <div class="review-card reveal"><img src="assets/reviews/review-02.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
-      <div class="review-card reveal"><img src="assets/reviews/review-03.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
-      <div class="review-card reveal"><img src="assets/reviews/review-04.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
-      <div class="review-card reveal"><img src="assets/reviews/review-05.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
-      <div class="review-card reveal"><img src="assets/reviews/review-06.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
-      <div class="review-card reveal"><img src="assets/reviews/review-07.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
-      <div class="review-card reveal"><img src="assets/reviews/review-08.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
-      <div class="review-card reveal"><img src="assets/reviews/review-09.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
-      <div class="review-card reveal"><img src="assets/reviews/review-10.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
-      <div class="review-card reveal"><img src="assets/reviews/review-11.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
+
+      <div class="review-card reveal">
+        <img src="assets/reviews/review-01.jpg" alt="Airbnb screenshot: Edmund, 8 years on Airbnb, five-star review October 2025 — 'The home is spotless and feels like a luxury hotel room'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <blockquote>
+          <p>"Had an absolutely perfect stay. The home is spotless and feels like a luxury hotel room. Can't recommend enough!"</p>
+          <footer><cite>Edmund</cite> · October 2025 · Stayed a few nights</footer>
+        </blockquote>
+      </div>
+
+      <div class="review-card reveal">
+        <img src="assets/reviews/review-02.jpg" alt="Airbnb screenshot: Kevin, Nairobi, five-star review May 2026 — 'The apartment was sparkling clean'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <blockquote>
+          <p>"The apartment was sparkling clean and she was available to support on everything I needed during the stay. Will definitely book again!"</p>
+          <footer><cite>Kevin</cite> · May 2026 · Nairobi, Kenya</footer>
+        </blockquote>
+      </div>
+
+      <div class="review-card reveal">
+        <img src="assets/reviews/review-03.jpg" alt="Airbnb screenshot: Nurul, 11 years on Airbnb, five-star review March 2025 — 'I also appreciated the regular cleaning service'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <blockquote>
+          <p>"This was hands down the best Airbnb experience I've had in my 10 years on the platform. I also appreciated the regular cleaning service, which made the stay feel even more comfortable and hassle-free."</p>
+          <footer><cite>Nurul</cite> · March 2025 · 11 years on Airbnb</footer>
+        </blockquote>
+      </div>
+
+      <div class="review-card reveal">
+        <img src="assets/reviews/review-04.jpg" alt="Airbnb screenshot: Tweheyo, five-star review July 2025 — 'The apartment is clean, lovely and spacious and Grace has a lovely team'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <blockquote>
+          <p>"The apartment is clean, lovely and spacious and Grace has a lovely team that are always ready to clean up upon request. We had a lovely stay!!"</p>
+          <footer><cite>Tweheyo</cite> · July 2025 · Stayed a few nights</footer>
+        </blockquote>
+      </div>
+
+      <div class="review-card reveal">
+        <img src="assets/reviews/review-05.jpg" alt="Airbnb screenshot: Fuad, Toronto, five-star review February 2025 — 'The apartment itself was clean, well-equipped, and perfectly suited for a family stay'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <blockquote>
+          <p>"The apartment itself was clean, well-equipped, and perfectly suited for a family stay. A big highlight was Kristy, the wonderful maid who came every 2–3 days. She was flexible, professional, and an absolute gem."</p>
+          <footer><cite>Fuad</cite> · February 2025 · Toronto, Canada · Stayed with kids</footer>
+        </blockquote>
+      </div>
+
+      <div class="review-card reveal">
+        <img src="assets/reviews/review-06.jpg" alt="Airbnb screenshot: Reuben, Austin Texas, five-star review March 2026 — 'The house was spotless'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <blockquote>
+          <p>"This place was absolutely wonderful! Great big house, great host and incredibly helpful. The house was spotless."</p>
+          <footer><cite>Reuben</cite> · March 2026 · Austin, Texas · Stayed a few nights</footer>
+        </blockquote>
+      </div>
+
+      <div class="review-card reveal">
+        <img src="assets/reviews/review-07.jpg" alt="Airbnb screenshot: Bernice, 3 years on Airbnb, five-star review December 2023 — 'the place was impeccably clean'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <blockquote>
+          <p>"I had an incredible stay. Cindy's hospitality was unmatched, creating a warm and welcoming atmosphere. Moreover, the place was impeccably clean, adding to the overall comfort of my stay. Highly recommend this gem."</p>
+          <footer><cite>Bernice</cite> · December 2023 · Stayed one night</footer>
+        </blockquote>
+      </div>
+
+      <div class="review-card reveal">
+        <img src="assets/reviews/review-08.jpg" alt="Airbnb screenshot: Sylvia, 5 years on Airbnb, five-star review October 2024 — 'The apartment was spotless, and the beds were incredibly comfortable'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <blockquote>
+          <p>"I had an amazing stay at Grace's place! The apartment was spotless, and the beds were incredibly comfortable. Highly recommend to anyone looking for a cozy and clean place to stay."</p>
+          <footer><cite>Sylvia</cite> · October 2024 · Stayed with kids</footer>
+        </blockquote>
+      </div>
+
+      <div class="review-card reveal">
+        <img src="assets/reviews/review-09.jpg" alt="Airbnb screenshot: Maurine, 3 years on Airbnb, five-star review January 2024 — 'the place is also extremely clean and clutter free'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <blockquote>
+          <p>"The place is also extremely clean and clutter free!"</p>
+          <footer><cite>Maurine</cite> · January 2024 · Stayed one night</footer>
+        </blockquote>
+      </div>
+
+      <div class="review-card reveal">
+        <img src="assets/reviews/review-10.jpg" alt="Airbnb screenshot: Cj, Los Angeles, five-star review November 2023 — 'I felt clean, relaxed, and inspired everyday of my stay'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <blockquote>
+          <p>"10/10!! Cindy has curated a beautiful and open space — I felt clean, relaxed, and inspired every day of my stay."</p>
+          <footer><cite>Cj</cite> · November 2023 · Los Angeles, California · Stayed a few nights</footer>
+        </blockquote>
+      </div>
+
+      <div class="review-card reveal">
+        <img src="assets/reviews/review-11.jpg" alt="Airbnb screenshot: James, 7 years on Airbnb, five-star review December 2023 — 'rooms were not only spacious but also elegant, vibrant, and impeccably clean'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <blockquote>
+          <p>"Our experience at Cindy's residence was superb. The rooms were not only spacious but also elegant, vibrant, and impeccably clean. Our hostess went above and beyond, even when we required assistance beyond regular hours. Highly recommended!"</p>
+          <footer><cite>James</cite> · December 2023 · 7 years on Airbnb · Stayed one night</footer>
+        </blockquote>
+      </div>
+
     </div>
     <p class="reviews-hint">Swipe to see more →</p>
   </div>
@@ -1956,10 +2046,78 @@
         "@type": "OfferCatalog",
         "name": "Monthly Cleaning Subscriptions",
         "itemListElement": [
-          {"@type": "Offer", "name": "1 Bedroom Plan", "price": "10000", "priceCurrency": "KES"},
-          {"@type": "Offer", "name": "2 Bedroom Plan", "price": "12000", "priceCurrency": "KES"},
-          {"@type": "Offer", "name": "3 Bedroom Plan", "price": "15000", "priceCurrency": "KES"}
+          {"@type": "Offer", "name": "1 Bedroom Plan", "price": "15000", "priceCurrency": "KES"},
+          {"@type": "Offer", "name": "2 Bedroom Plan", "price": "18000", "priceCurrency": "KES"},
+          {"@type": "Offer", "name": "3 Bedroom Plan", "price": "22000", "priceCurrency": "KES"}
         ]
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ================================================
+     STRUCTURED DATA – FAQ PAGE
+================================================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the difference between a maintenance visit and a checkout clean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A maintenance visit is hotel housekeeping – bathrooms fully cleaned, towels changed if dirty, bedding refreshed when needed, surfaces wiped, dusted, mopped, vacuumed. The unit is left fresh. A checkout clean is the guaranteed full turnover: bedding always changed, every room cleaned to The Host Standard, unit fully staged, and photographed for the record. Both are included in your subscription."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my guest declines a maintenance visit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No problem – guests can decline if they prefer not to be disturbed. When they do, that visit simply doesn't count against your 20-visit total for that billing period. Credits do not roll over to the following month – your billing period runs from the anniversary of your sign-up date. Checkout cleans are mandatory regardless."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I need more than 20 cleans in a month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each completed visit above 20 is billed at the overage rate: KES 1,000 (1BR), KES 1,300 (2BR), or KES 1,600 (3BR). These are invoiced separately at month end, clearly itemised. Most months you won't reach the cap – especially when long-stay guests decline some maintenance visits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who provides the cleaning supplies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cleaning supplies are provided by you, the host, and kept at the property. We'll flag when supplies are running low. If you'd rather not manage it, we keep hotel-grade linen, cleaning products, and guest amenities in stock, invoiced as a simple add-on to your subscription."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does communication work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Everything runs through one WhatsApp Business number. You receive 24-hour advance notice before each scheduled clean, and any damage or maintenance issue the moment it's found, with photos. Every clean is documented on our side too. If you ever want to see it, just ask and we'll send it straight to your WhatsApp. You always deal with the company, not individual cleaners."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I pause service if my unit is unoccupied?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Give us 7 days' written notice and we'll pause your subscription for the unoccupied period. Your service resumes on an agreed restart date. Either party can exit the agreement with 30 days' written notice via WhatsApp or email."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which areas do you cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We currently operate in Westlands, Kilimani, Lavington, Parklands, and Kileleshwa. If your unit is just outside these areas, WhatsApp us and we'll confirm whether we can accommodate you."
       }
     }
   ]
