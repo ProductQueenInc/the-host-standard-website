@@ -13,3 +13,19 @@ The_Host_Standard_Shareholders_Agreement.docx
 # Unused source assets not referenced by the site
 assets/Squeeky\ Clean\ viz\ card.png
 assets/the\ host\ standard\ logo.png
+assets/cindy-headshot.jpg
+assets/christina-headshot.png
+
+# Raw design source folders (deliverables, not site assets — use the optimized
+# copies in assets/ instead)
+THS_Transparent Crest variants/
+THS_Headshots/
+THS Reviews carousel/
+
+# Intermediate PNG renders from the review SVGs — only the compressed .jpg
+# copies in assets/reviews/ are meant to ship
+assets/reviews/*.png
+
+# Stray broken-git cleanup artifacts from an earlier setup session
+.git-broken-backup/
+.git-broken-backup-2/

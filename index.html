@@ -626,6 +626,8 @@
       font-family: var(--serif); font-size: 1.1rem; font-weight: 600;
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
+      object-fit: cover;
+      border: 2px solid var(--coral-mid);
     }
     .founder h4 { color: var(--text); margin-bottom: 2px; }
     .founder-role { font-size: 0.77rem; color: var(--coral); font-weight: 500; margin-bottom: 5px; }
@@ -644,6 +646,30 @@
     }
     .tfeature h4 { margin-bottom: 5px; font-size: 0.88rem; }
     .tfeature p { font-size: 0.9rem; color: var(--muted); margin: 0; line-height: 1.6; }
+
+    /* ================================================
+       REVIEWS CAROUSEL
+    ================================================= */
+    .reviews { background: #fff; }
+    .reviews-track {
+      display: flex; gap: 20px; overflow-x: auto;
+      scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+      padding-bottom: 16px; margin: 0 -28px; padding-left: 28px; padding-right: 28px;
+      scrollbar-width: thin; scrollbar-color: var(--coral-mid) transparent;
+    }
+    .reviews-track::-webkit-scrollbar { height: 6px; }
+    .reviews-track::-webkit-scrollbar-thumb { background: var(--coral-mid); border-radius: var(--r-full); }
+    .review-card {
+      flex: 0 0 auto; width: 260px; aspect-ratio: 1 / 1;
+      border-radius: var(--r-md); overflow: hidden;
+      border: 1px solid var(--border); box-shadow: var(--sh-xs);
+      scroll-snap-align: start; background: var(--cream);
+    }
+    .review-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .reviews-hint {
+      text-align: center; color: var(--muted); font-size: 0.82rem;
+      margin-top: 4px;
+    }
 
     /* ================================================
        FAQ
@@ -905,6 +931,10 @@
       .tfeatures { grid-template-columns: 1fr; gap: 12px; }
       .tfeature { padding: 20px 18px; }
 
+      /* Reviews */
+      .review-card { width: 210px; }
+      .reviews-track { margin: 0 -20px; padding-left: 20px; padding-right: 20px; gap: 14px; }
+
       /* FAQ */
       .faq-btn { min-height: 56px; padding: 18px 0; }
       .faq-btn span { font-size: 0.92rem; }
@@ -1072,9 +1102,9 @@
         The filter: brightness(0) invert(1) turns it white on this dark nav.
       -->
       <img
-        src="assets/logo.png"
+        src="assets/crest-white.svg"
         alt="The Host Standard"
-        class="nav-brand-logo logo-img logo-img-white"
+        class="nav-brand-logo logo-img"
         onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
         width="40" height="40">
       <svg class="nav-brand-logo" style="display:none; color:white" aria-hidden="true">
@@ -1087,6 +1117,7 @@
       <li><a href="#how-it-works">How it works</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#reviews">Reviews</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
@@ -1111,6 +1142,7 @@
   <a href="#how-it-works" onclick="document.getElementById('mobile-nav').classList.remove('open')">How it works</a>
   <a href="#services" onclick="document.getElementById('mobile-nav').classList.remove('open')">Services</a>
   <a href="#pricing" onclick="document.getElementById('mobile-nav').classList.remove('open')">Pricing</a>
+  <a href="#reviews" onclick="document.getElementById('mobile-nav').classList.remove('open')">Reviews</a>
   <a href="#about" onclick="document.getElementById('mobile-nav').classList.remove('open')">About</a>
   <a href="#faq" onclick="document.getElementById('mobile-nav').classList.remove('open')">FAQ</a>
   <a href="https://wa.me/254798913341?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20The%20Host%20Standard."
@@ -1480,9 +1512,9 @@
         <div class="sq-visual">
           <!-- Logo on the Squeaky Clean card visual -->
           <img
-            src="assets/logo.png"
+            src="assets/crest-white.svg"
             alt="The Host Standard logo"
-            class="sq-visual-logo logo-img-white"
+            class="sq-visual-logo"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
             width="38" height="38">
           <svg class="sq-visual-logo" style="display:none; color:rgba(255,255,255,0.85)">
@@ -1518,7 +1550,7 @@
 
         <div class="founders">
           <div class="founder">
-            <div class="founder-av">C</div>
+            <img src="assets/cindy-headshot-opt.jpg" alt="Cindy, Partnerships Lead and Co-founder" class="founder-av" width="52" height="52">
             <div>
               <h4>Cindy</h4>
               <div class="founder-role">Partnerships Lead · Co-founder</div>
@@ -1526,7 +1558,7 @@
             </div>
           </div>
           <div class="founder">
-            <div class="founder-av">CM</div>
+            <img src="assets/christina-headshot-opt.jpg" alt="Christina Moseti, Guest Relations Lead and Co-founder" class="founder-av" width="52" height="52">
             <div>
               <h4>Christina Moseti</h4>
               <div class="founder-role">Guest Relations Lead · Co-founder</div>
@@ -1560,6 +1592,35 @@
       </div>
 
     </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     REVIEWS CAROUSEL
+================================================= -->
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="sh center reveal">
+      <span class="eyebrow">Real Reviews</span>
+      <h2>Real hosts. Real five-star reviews.</h2>
+      <p>Cleanliness can make or break an Airbnb listing. These are actual guest reviews from properties Christina's team cleans – including our own units – going back to 2023. See the standard for yourself, then let's partner on yours.</p>
+    </div>
+
+    <div class="reviews-track">
+      <div class="review-card reveal"><img src="assets/reviews/review-01.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
+      <div class="review-card reveal"><img src="assets/reviews/review-02.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
+      <div class="review-card reveal"><img src="assets/reviews/review-03.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
+      <div class="review-card reveal"><img src="assets/reviews/review-04.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
+      <div class="review-card reveal"><img src="assets/reviews/review-05.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
+      <div class="review-card reveal"><img src="assets/reviews/review-06.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
+      <div class="review-card reveal"><img src="assets/reviews/review-07.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
+      <div class="review-card reveal"><img src="assets/reviews/review-08.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
+      <div class="review-card reveal"><img src="assets/reviews/review-09.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
+      <div class="review-card reveal"><img src="assets/reviews/review-10.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
+      <div class="review-card reveal"><img src="assets/reviews/review-11.jpg" alt="Five-star Airbnb guest review praising cleanliness" loading="lazy" onerror="this.closest('.review-card').style.display='none'"></div>
+    </div>
+    <p class="reviews-hint">Swipe to see more →</p>
   </div>
 </section>
 
@@ -1680,9 +1741,9 @@
 
       <div class="footer-brand">
         <img
-          src="assets/logo.png"
+          src="assets/crest-white.svg"
           alt="The Host Standard"
-          class="footer-brand-logo logo-img logo-img-white"
+          class="footer-brand-logo logo-img"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
           width="42" height="42">
         <svg class="footer-brand-logo" style="display:none; color:rgba(255,255,255,0.6)">
@@ -1699,6 +1760,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#the-standard">The Standard</a></li>
+          <li><a href="#reviews">Reviews</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
