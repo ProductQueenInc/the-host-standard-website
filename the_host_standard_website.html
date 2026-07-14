@@ -22,7 +22,16 @@
   <meta property="og:description" content="Every checkout, guest-ready. Uniformed teams, every clean documented, one monthly subscription. Nairobi's professional cleaning service for Airbnb and short-term rental hosts.">
   <meta property="og:url" content="https://thehoststandard.co.ke/">
   <meta property="og:locale" content="en_KE">
-  <meta property="og:image" content="https://thehoststandard.co.ke/assets/logo.png">
+  <meta property="og:image" content="https://thehoststandard.co.ke/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Host Standard Squeaky Clean tent card on a marble table in a luxury Airbnb, Nairobi skyline at sunset">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Host Standard | Professional Short-Term Rental Cleaning in Nairobi">
+  <meta name="twitter:description" content="Every checkout, guest-ready. Uniformed teams, every clean documented, one monthly subscription. Nairobi's professional cleaning service for Airbnb and short-term rental hosts.">
+  <meta name="twitter:image" content="https://thehoststandard.co.ke/assets/og-image.jpg">
 
   <!-- Fonts: Playfair Display (serif headlines) + DM Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -677,12 +686,12 @@
     .reviews-track::-webkit-scrollbar { height: 6px; }
     .reviews-track::-webkit-scrollbar-thumb { background: var(--coral-mid); border-radius: var(--r-full); }
     .review-card {
-      flex: 0 0 auto; width: 260px; aspect-ratio: 1 / 1;
+      flex: 0 0 auto; width: 340px; aspect-ratio: 16 / 9;
       border-radius: var(--r-md); overflow: hidden;
       border: 1px solid var(--border); box-shadow: var(--sh-xs);
-      scroll-snap-align: start; background: var(--cream);
+      scroll-snap-align: start; background: #b5433f;
     }
-    .review-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .review-card img { width: 100%; height: 100%; object-fit: contain; display: block; }
     .reviews-hint {
       text-align: center; color: var(--muted); font-size: 0.82rem;
       margin-top: 4px;
@@ -956,7 +965,7 @@
       .tfeature { padding: 20px 18px; }
 
       /* Reviews */
-      .review-card { width: 210px; }
+      .review-card { width: 280px; }
       .reviews-track { margin: 0 -20px; padding-left: 20px; padding-right: 20px; gap: 14px; }
 
       /* FAQ */
