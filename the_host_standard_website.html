@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The Host Standard | Professional Short-Term Rental Cleaning in Nairobi</title>
+  <meta name="description" content="Professional Airbnb and short-term rental cleaning for Nairobi hosts. Uniformed teams, before-and-after photos within 15 minutes of every checkout. Monthly subscriptions from KES 15,000. Serving Westlands, Kilimani, Lavington, Parklands &amp; Kileleshwa.">
+  <meta name="keywords" content="Airbnb cleaning Nairobi, Airbnb turnover cleaning Nairobi, short term rental cleaning Nairobi, Airbnb host services Nairobi, property cleaning Westlands Kilimani">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://thehoststandard.co.ke/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Host Standard | Professional Short-Term Rental Cleaning in Nairobi">
+  <meta property="og:description" content="Every checkout, guest-ready. Uniformed teams, photos within 15 minutes, one monthly subscription. Nairobi's professional cleaning service for Airbnb and short-term rental hosts.">
+  <meta property="og:url" content="https://thehoststandard.co.ke/">
+  <meta property="og:locale" content="en_KE">
+  <meta property="og:image" content="https://thehoststandard.co.ke/assets/logo.png">
+
+  <!-- Fonts: Playfair Display (serif headlines) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================================================
+       DESIGN TOKENS
+    ================================================= */
+    :root {
+      /* Brand coral – Airbnb pink */
+      --coral:      #f86063;
+      --coral-dk:   #e04547;
+      --coral-lt:   #FFF2F2;
+      --coral-mid:  #FFD6D8;
+
+      /* Dark palette */
+      --ink:        #0D0D0D;
+      --charcoal:   #1A1A1A;
+      --dark:       #242424;
+
+      /* Light palette */
+      --cream:      #FAF8F5;
+      --stone:      #F2EDE8;
+      --white:      #FFFFFF;
+
+      /* Text */
+      --text:       #1A1A1A;
+      --body:       #3D3D3D;
+      --muted:      #797979;
+      --border:     #E5E0DA;
+
+      /* WhatsApp */
+      --wa:         #25D366;
+      --wa-dk:      #1DAA54;
+
+      /* Type */
+      --serif:  'Playfair Display', Georgia, serif;
+      --sans:   'DM Sans', system-ui, -apple-system, sans-serif;
+
+      /* Radii */
+      --r-xs:   4px;
+      --r-sm:   8px;
+      --r-md:   14px;
+      --r-lg:   22px;
+      --r-full: 9999px;
+
+      /* Shadows */
+      --sh-xs: 0 1px 4px rgba(0,0,0,0.06);
+      --sh-sm: 0 2px 12px rgba(0,0,0,0.08);
+      --sh-md: 0 8px 32px rgba(0,0,0,0.10);
+      --sh-lg: 0 20px 64px rgba(0,0,0,0.14);
+
+      --wrap: 1100px;
+      --sp:   96px;
+    }
+
+    /* ================================================
+       RESET & BASE
+    ================================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
+    body {
+      font-family: var(--sans);
+      color: var(--body);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.65;
+      overflow-x: hidden;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; font-family: inherit; border: none; background: none; }
+    ul { list-style: none; }
+
+    /* Prevent flex/grid children from overflowing their container */
+    .problem-grid > *,
+    .promise-grid > *,
+    .trust-grid > *,
+    .steps > *,
+    .visit-cards > *,
+    .pricing-grid > *,
+    .tfeatures > *,
+    .step > div,
+    .pillar > div,
+    .founder > div,
+    .pain-item > div { min-width: 0; }
+
+    /* ================================================
+       LAYOUT
+    ================================================= */
+    .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 28px; }
+    .section    { padding: var(--sp) 0; }
+    .section-sm { padding: 64px 0; }
+    .section-lg { padding: 120px 0; }
+
+    /* ================================================
+       TYPOGRAPHY
+    ================================================= */
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 5.5vw, 4.6rem);
+      font-weight: 500; line-height: 1.08;
+    }
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.5vw, 3.1rem);
+      font-weight: 500; line-height: 1.15;
+    }
+    h3 {
+      font-family: var(--serif);
+      font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+      font-weight: 500; line-height: 1.25;
+    }
+    h4 { font-family: var(--sans); font-size: 1rem; font-weight: 600; }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--coral); margin-bottom: 14px;
+    }
+    .eyebrow-light { color: rgba(255,255,255,0.9); }
+
+    .sh { max-width: 600px; margin-bottom: 60px; }
+    .sh p { color: var(--muted); font-size: 1.1rem; margin-top: 14px; line-height: 1.75; }
+    .sh.center { text-align: center; margin-left: auto; margin-right: auto; }
+
+    /* ================================================
+       BUTTONS
+    ================================================= */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 26px; border-radius: var(--r-xs);
+      font-family: var(--sans); font-size: 0.9rem; font-weight: 500;
+      letter-spacing: 0.2px; border: 1.5px solid transparent;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-coral  { background: var(--coral); color: #fff; border-color: var(--coral); }
+    .btn-coral:hover { background: var(--coral-dk); border-color: var(--coral-dk); box-shadow: 0 4px 20px rgba(248,96,99,0.35); }
+
+    .btn-wa     { background: var(--wa); color: #fff; border-color: var(--wa); }
+    .btn-wa:hover { background: var(--wa-dk); border-color: var(--wa-dk); box-shadow: 0 4px 20px rgba(37,211,102,0.35); }
+
+    .btn-ghost  { background: transparent; color: #fff; border-color: rgba(255,255,255,0.35); }
+    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.06); }
+
+    .btn-white  { background: #fff; color: var(--ink); border-color: #fff; }
+    .btn-white:hover { background: var(--cream); }
+
+    .btn-outline { background: transparent; color: var(--coral); border-color: var(--coral-mid); }
+    .btn-outline:hover { border-color: var(--coral); background: var(--coral-lt); }
+
+    .btn-lg { padding: 17px 34px; font-size: 0.95rem; }
+
+    /* ================================================
+       LOGO – SVG symbol + real-image fallback
+    ================================================= */
+    /*
+      LOGO SETUP:
+      • Dark backgrounds (nav, hero, footer, promise): use .logo-svg, color:white
+      • Light backgrounds (about section etc): use .logo-img (actual PNG, coral naturally)
+      • To activate the real logo PNG, place it at: assets/logo.png
+        The <img> tags below have onerror fallback to show SVG automatically.
+    */
+    .logo-img {
+      display: block;
+    }
+    .logo-img-white {
+      /* CSS filter to turn the coral PNG white on dark backgrounds */
+      filter: brightness(0) invert(1);
+    }
+
+    /* ================================================
+       NAVIGATION
+    ================================================= */
+    .nav {
+      position: sticky; top: 0; z-index: 200;
+      background: var(--ink);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-inner {
+      display: flex; align-items: center;
+      justify-content: space-between; height: 70px; gap: 24px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 11px; flex-shrink: 0;
+    }
+    .nav-brand-logo {
+      width: 40px; height: 40px; flex-shrink: 0;
+    }
+    .nav-brand-name {
+      font-family: var(--serif); font-size: 0.95rem; font-weight: 500;
+      color: #fff; letter-spacing: 0.3px; line-height: 1.2;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 30px;
+    }
+    .nav-links a {
+      font-size: 0.86rem; color: rgba(255,255,255,0.72);
+      transition: color 0.15s; letter-spacing: 0.2px;
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta { flex-shrink: 0; }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px; padding: 4px;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: #fff; border-radius: 2px; transition: all 0.3s;
+    }
+
+    /* ================================================
+       MOBILE NAV
+    ================================================= */
+    .mobile-nav {
+      display: none; position: fixed; inset: 0; z-index: 300;
+      background: var(--ink); flex-direction: column;
+      align-items: center; justify-content: center; gap: 36px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      font-family: var(--serif); font-size: 2rem;
+      color: #fff; font-weight: 400;
+      padding: 8px 0; min-height: 56px;
+      display: flex; align-items: center;
+    }
+    .mobile-nav a:hover { color: var(--coral); }
+    .mobile-close {
+      position: absolute; top: 16px; right: 20px;
+      color: #fff; font-size: 1.8rem; line-height: 1;
+      width: 48px; height: 48px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ================================================
+       HERO
+    ================================================= */
+    .hero {
+      background: var(--ink);
+      min-height: calc(100vh - 70px);
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+    }
+    /* Ensure wrap fills full hero width so text aligns with rest of page */
+    .hero > .wrap { width: 100%; position: relative; z-index: 2; }
+
+    /* Subtle coral glow */
+    .hero::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse at 15% 60%, rgba(248,96,99,0.07) 0%, transparent 55%);
+    }
+
+    /* ── Hero photo: tent card on marble table ── */
+    .hero-photo {
+      position: absolute; inset: 0;   /* covers full hero – no hard edge */
+      pointer-events: none; overflow: hidden;
+    }
+    .hero-photo img {
+      position: absolute; right: 0; top: 0;
+      width: 68%; height: 100%;
+      object-fit: cover; object-position: left center;
+      opacity: 0.72;
+    }
+    /* Full-width gradient: solid ink on left (text area) → transparent at right */
+    .hero-photo::after {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(
+        to right,
+        var(--ink)            0%,
+        var(--ink)            30%,
+        rgba(13,13,13,0.94)   40%,
+        rgba(13,13,13,0.60)   54%,
+        rgba(13,13,13,0.18)   74%,
+        transparent          100%
+      );
+    }
+    .hero-inner {
+      position: relative; z-index: 3;   /* above gradient overlay (z-index:1) and photo */
+      padding: var(--sp) 0; max-width: 600px; width: 100%;
+    }
+    .hero-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 16px;
+      background: rgba(248,96,99,0.12);
+      border: 1px solid rgba(248,96,99,0.3);
+      border-radius: var(--r-full);
+      font-size: 0.73rem; font-weight: 600;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--coral); margin-bottom: 28px;
+    }
+    .hero-pill-dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--coral); flex-shrink: 0;
+    }
+    .hero h1 { color: #fff; margin-bottom: 22px; }
+    .hero h1 em { font-style: italic; color: var(--coral); }
+    .hero-sub {
+      font-size: 1.1rem; color: rgba(255,255,255,0.66);
+      max-width: 560px; line-height: 1.78; margin-bottom: 40px;
+    }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 52px; }
+    .hero-proof {
+      display: flex; flex-wrap: wrap; gap: 28px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .hero-proof-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.82rem; color: rgba(255,255,255,0.62);
+    }
+    .proof-tick {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: rgba(248,96,99,0.2);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 0.62rem; color: var(--coral); font-weight: 700;
+    }
+
+    /* ================================================
+       LOCATION STRIP
+    ================================================= */
+    .lstrip {
+      background: var(--cream);
+      border-bottom: 1px solid var(--border); padding: 16px 0;
+    }
+    .lstrip-inner {
+      display: flex; flex-wrap: wrap; align-items: center;
+      gap: 10px; justify-content: center;
+    }
+    .lstrip-label {
+      font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted);
+    }
+    .lchip {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 5px 13px; background: #fff;
+      border: 1px solid var(--border); border-radius: var(--r-full);
+      font-size: 0.8rem; color: var(--body);
+    }
+    .lchip-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--coral); flex-shrink: 0; }
+
+    /* ================================================
+       PROBLEM SECTION
+    ================================================= */
+    .problem { background: #fff; }
+    .problem-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 72px; align-items: center;
+    }
+    .problem-copy p { color: var(--muted); margin: 18px 0; line-height: 1.75; }
+    .pain-list { margin-top: 32px; }
+    .pain-item {
+      display: flex; gap: 16px;
+      padding: 22px 0; border-bottom: 1px solid var(--border);
+    }
+    .pain-item:first-child { border-top: 1px solid var(--border); }
+    .pain-icon {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: #FFF0F0; color: var(--coral);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; font-weight: 700; flex-shrink: 0;
+    }
+    .pain-item h4 { margin-bottom: 4px; }
+    .pain-item p { font-size: 0.93rem; color: var(--muted); margin: 0; line-height: 1.65; }
+
+    .stats-panel {
+      background: var(--coral-lt);
+      border: 1px solid var(--coral-mid);
+      border-radius: var(--r-lg); padding: 44px 36px;
+      position: relative; overflow: hidden;
+    }
+    .stats-panel::before {
+      content: ''; position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: rgba(248,96,99,0.08);
+    }
+    .stat-card {
+      background: #fff; border-radius: var(--r-md);
+      padding: 26px 28px; margin-bottom: 14px;
+      box-shadow: var(--sh-xs); position: relative; z-index: 1;
+    }
+    .stat-card:last-child { margin-bottom: 0; }
+    .stat-n {
+      font-family: var(--serif); font-size: 2.4rem;
+      font-weight: 700; color: var(--coral);
+      line-height: 1; margin-bottom: 6px;
+    }
+    .stat-l { font-size: 0.93rem; color: var(--muted); line-height: 1.6; }
+
+    /* ================================================
+       HOW IT WORKS
+    ================================================= */
+    .how { background: var(--cream); }
+    .steps {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 36px; position: relative;
+    }
+    .steps-line {
+      position: absolute; top: 32px;
+      left: calc(16.67% + 18px); right: calc(16.67% + 18px);
+      height: 1px; background: var(--border);
+    }
+    .step { text-align: center; }
+    .step-num {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: var(--coral); color: #fff;
+      font-family: var(--serif); font-size: 1.5rem; font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px; position: relative; z-index: 1;
+      box-shadow: 0 4px 20px rgba(248,96,99,0.3);
+    }
+    .step h3 { margin-bottom: 12px; font-size: 1.2rem; }
+    .step p { font-size: 0.97rem; color: var(--muted); line-height: 1.72; }
+
+    /* ================================================
+       VISIT TYPES / SERVICES
+    ================================================= */
+    .visits { background: #fff; }
+    .visit-cards {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 22px; margin-bottom: 32px;
+    }
+    .vcard {
+      border-radius: var(--r-md); padding: 40px 36px;
+      border: 1.5px solid var(--border);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .vcard:hover { box-shadow: var(--sh-md); transform: translateY(-2px); }
+    .vcard.hero-v { background: var(--ink); border-color: var(--ink); }
+
+    .vcard-badge {
+      display: inline-block; font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 1.8px; text-transform: uppercase;
+      padding: 4px 12px; border-radius: var(--r-full); margin-bottom: 20px;
+    }
+    .vcard:not(.hero-v) .vcard-badge { background: var(--cream); color: var(--muted); }
+    .vcard.hero-v .vcard-badge { background: rgba(248,96,99,0.18); color: var(--coral); }
+
+    .vcard:not(.hero-v) h3 { color: var(--text); }
+    .vcard.hero-v h3 { color: #fff; }
+    .vcard h3 { margin-bottom: 12px; }
+
+    .vcard:not(.hero-v) > p { color: var(--muted); font-size: 0.97rem; margin-bottom: 26px; line-height: 1.72; }
+    .vcard.hero-v > p { color: rgba(255,255,255,0.68); font-size: 0.97rem; margin-bottom: 26px; line-height: 1.72; }
+
+    .vcard-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.93rem; padding: 5px 0;
+    }
+    .vcard:not(.hero-v) .vcard-list li { color: var(--body); }
+    .vcard.hero-v .vcard-list li { color: rgba(255,255,255,0.78); }
+    .vcard-list li::before { content: '✓'; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .vcard:not(.hero-v) .vcard-list li::before { color: var(--coral); }
+    .vcard.hero-v .vcard-list li::before { color: var(--coral); }
+
+    .credit-note {
+      padding: 28px 32px; background: var(--coral-lt);
+      border-radius: var(--r-md); border-left: 3px solid var(--coral);
+    }
+    .credit-note h4 { color: var(--coral); margin-bottom: 8px; font-family: var(--serif); font-size: 1.05rem; font-weight: 500; }
+    .credit-note p { font-size: 0.9rem; color: var(--muted); margin: 0; line-height: 1.7; }
+
+    /* ================================================
+       PRICING
+    ================================================= */
+    .pricing { background: var(--cream); }
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+    }
+    .pcard {
+      background: #fff; border-radius: var(--r-md);
+      padding: 40px 32px; border: 1.5px solid var(--border);
+      display: flex; flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .pcard:hover { transform: translateY(-4px); box-shadow: var(--sh-md); }
+    .pcard.star { background: var(--ink); border-color: var(--ink); }
+
+    .pcard-lbl {
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 1.8px; text-transform: uppercase; margin-bottom: 20px;
+    }
+    .pcard:not(.star) .pcard-lbl { color: var(--muted); }
+    .pcard.star .pcard-lbl { color: rgba(255,255,255,0.7); }
+
+    .pcard h3 { margin-bottom: 4px; }
+    .pcard:not(.star) h3 { color: var(--text); }
+    .pcard.star h3 { color: #fff; }
+
+    .pcard-price {
+      font-family: var(--serif); font-size: 3rem;
+      font-weight: 700; line-height: 1; margin: 20px 0 4px;
+    }
+    .pcard:not(.star) .pcard-price { color: var(--coral); }
+    .pcard.star .pcard-price { color: #fff; }
+
+    .pcard-per { font-size: 0.82rem; margin-bottom: 28px; }
+    .pcard:not(.star) .pcard-per { color: var(--muted); }
+    .pcard.star .pcard-per { color: rgba(255,255,255,0.72); }
+
+    .pcard-div { border: none; border-top: 1px solid; margin-bottom: 24px; }
+    .pcard:not(.star) .pcard-div { border-color: var(--border); }
+    .pcard.star .pcard-div { border-color: rgba(255,255,255,0.1); }
+
+    .pcard-feats { flex: 1; margin-bottom: 28px; }
+    .pcard-feats li {
+      display: flex; align-items: flex-start; gap: 9px;
+      font-size: 0.93rem; padding: 5px 0;
+    }
+    .pcard:not(.star) .pcard-feats li { color: var(--body); }
+    .pcard.star .pcard-feats li { color: rgba(255,255,255,0.78); }
+    .pcard-feats li::before { content: '✓'; font-weight: 700; flex-shrink: 0; }
+    .pcard:not(.star) .pcard-feats li::before { color: var(--coral); }
+    .pcard.star .pcard-feats li::before { color: var(--coral); }
+
+    .pcard-note { font-size: 0.75rem; text-align: center; margin-top: 12px; }
+    .pcard:not(.star) .pcard-note { color: var(--muted); }
+    .pcard.star .pcard-note { color: rgba(255,255,255,0.65); }
+
+    .pricing-foot {
+      text-align: center; color: var(--muted);
+      font-size: 0.86rem; margin-top: 32px; line-height: 1.6;
+    }
+
+    /* ================================================
+       SQUEAKY CLEAN PROMISE
+    ================================================= */
+    .promise { background: var(--charcoal); }
+    .promise-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: center;
+    }
+    .promise-copy h2 { color: #fff; margin-bottom: 18px; }
+    .promise-copy > p { color: rgba(255,255,255,0.95); font-size: 1.05rem; margin-bottom: 14px; line-height: 1.75; }
+
+    .pillars { margin-top: 36px; }
+    .pillar {
+      display: flex; gap: 16px;
+      padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .pillar:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+    .pillar-icon {
+      width: 40px; height: 40px; border-radius: var(--r-xs);
+      background: rgba(248,96,99,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+    .pillar h4 { color: #fff; margin-bottom: 4px; }
+    .pillar p { font-size: 0.93rem; color: rgba(255,255,255,0.78); margin: 0; line-height: 1.65; }
+
+    .promise-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--r-lg); padding: 52px 40px; text-align: center;
+    }
+    .sq-visual {
+      width: 190px; height: 112px;
+      background: var(--ink);
+      border-radius: 12px;
+      margin: 0 auto 28px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 8px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .sq-visual-logo { width: 38px; height: 38px; }
+    .sq-visual-txt {
+      font-family: var(--serif); font-size: 0.68rem;
+      letter-spacing: 2.5px; color: rgba(255,255,255,0.55);
+    }
+    .promise-card h3 { color: #fff; margin-bottom: 12px; }
+    .promise-card p { color: rgba(255,255,255,0.82); font-size: 0.9rem; line-height: 1.72; }
+    .promise-card .aside-note {
+      margin-top: 24px; padding: 16px 18px;
+      background: rgba(255,255,255,0.04);
+      border-radius: var(--r-md);
+      font-size: 0.78rem; color: rgba(255,255,255,0.65); line-height: 1.65;
+    }
+
+    /* ================================================
+       TRUST / ABOUT
+    ================================================= */
+    .trust { background: #fff; }
+    .trust-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: start;
+    }
+    .trust-copy p { color: var(--muted); margin: 18px 0; line-height: 1.75; }
+
+    .founders { margin-top: 36px; }
+    .founder {
+      display: flex; gap: 16px;
+      padding: 22px 0; border-bottom: 1px solid var(--border);
+    }
+    .founder:first-child { border-top: 1px solid var(--border); }
+    .founder-av {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: var(--coral-lt); color: var(--coral);
+      font-family: var(--serif); font-size: 1.1rem; font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .founder h4 { color: var(--text); margin-bottom: 2px; }
+    .founder-role { font-size: 0.77rem; color: var(--coral); font-weight: 500; margin-bottom: 5px; }
+    .founder p { font-size: 0.93rem; color: var(--muted); margin: 0; line-height: 1.65; }
+
+    .tfeatures { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .tfeature {
+      padding: 24px 22px; background: var(--cream);
+      border-radius: var(--r-md); border: 1px solid var(--border);
+    }
+    .tfeature-icon {
+      width: 42px; height: 42px; border-radius: var(--r-xs);
+      background: var(--coral-lt);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; margin-bottom: 14px;
+    }
+    .tfeature h4 { margin-bottom: 5px; font-size: 0.88rem; }
+    .tfeature p { font-size: 0.9rem; color: var(--muted); margin: 0; line-height: 1.6; }
+
+    /* ================================================
+       FAQ
+    ================================================= */
+    .faq { background: var(--cream); }
+    .faq-list { max-width: 700px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-btn {
+      width: 100%; display: flex;
+      justify-content: space-between; align-items: center; gap: 16px;
+      padding: 22px 0; text-align: left;
+    }
+    .faq-btn span { font-size: 1.02rem; font-weight: 500; color: var(--text); }
+    .faq-icon {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: var(--coral-lt); color: var(--coral);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; font-weight: 300; flex-shrink: 0;
+      transition: transform 0.25s, background 0.25s, color 0.25s;
+    }
+    .faq-item.is-open .faq-icon {
+      transform: rotate(45deg);
+      background: var(--coral); color: #fff;
+    }
+    .faq-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding-bottom 0.35s; }
+    .faq-item.is-open .faq-body { max-height: 300px; padding-bottom: 22px; }
+    .faq-body p { font-size: 0.92rem; color: var(--muted); line-height: 1.78; }
+
+    /* ================================================
+       FINAL CTA
+    ================================================= */
+    .fcta {
+      background: var(--ink); padding: 120px 0;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .fcta::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse at center, rgba(248,96,99,0.1) 0%, transparent 65%);
+    }
+    .fcta-inner { position: relative; z-index: 1; }
+    .fcta h2 {
+      color: #fff; font-style: italic;
+      font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 16px;
+    }
+    .fcta p {
+      color: rgba(255,255,255,0.62); font-size: 1.05rem;
+      max-width: 460px; margin: 0 auto 40px; line-height: 1.75;
+    }
+    .fcta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .fcta-note { margin-top: 24px; font-size: 0.79rem; color: rgba(255,255,255,0.65); }
+
+    /* ================================================
+       FOOTER
+    ================================================= */
+    .footer { background: var(--ink); padding: 56px 0 32px; }
+    .footer-top {
+      display: flex; justify-content: space-between;
+      gap: 48px; padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      flex-wrap: wrap;
+    }
+    .footer-brand-logo { width: 42px; height: 42px; margin-bottom: 14px; }
+    .footer-brand-name {
+      font-family: var(--serif); font-size: 1rem;
+      color: #fff; margin-bottom: 10px;
+    }
+    .footer-brand p { font-size: 0.84rem; color: rgba(255,255,255,0.68); max-width: 240px; line-height: 1.65; }
+    .footer-col h5 {
+      font-size: 0.67rem; font-weight: 600;
+      letter-spacing: 1.8px; text-transform: uppercase;
+      color: rgba(255,255,255,0.6); margin-bottom: 18px;
+    }
+    .footer-col li { margin-bottom: 10px; }
+    .footer-col a {
+      font-size: 0.87rem; color: rgba(255,255,255,0.72);
+      transition: color 0.15s;
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-wa {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.87rem; color: var(--wa);
+    }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-top: 24px; flex-wrap: wrap; gap: 10px;
+    }
+    .footer-bottom p { font-size: 0.79rem; color: rgba(255,255,255,0.62); }
+
+    /* ================================================
+       FLOATING WA BUTTON
+    ================================================= */
+    .wa-float {
+      position: fixed;
+      bottom: max(26px, calc(16px + env(safe-area-inset-bottom)));
+      right: max(26px, calc(16px + env(safe-area-inset-right)));
+      z-index: 500;
+      width: 58px; height: 58px; border-radius: 50%;
+      background: var(--wa); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
+
+    /* ================================================
+       SCROLL REVEAL
+    ================================================= */
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.1s; }
+    .d2 { transition-delay: 0.2s; }
+    .d3 { transition-delay: 0.3s; }
+
+    /* ================================================
+       RESPONSIVE — base touch improvements (all screen sizes)
+    ================================================= */
+    button, a, .btn, .faq-btn, .hamburger, .mobile-close, .wa-float {
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    /* ================================================
+       RESPONSIVE — Tablet landscape  (≤ 960px)
+    ================================================= */
+    @media (max-width: 960px) {
+      :root { --sp: 64px; }
+
+      /* Nav */
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+
+      /* Hero – photo hidden, add a subtle right-side glow so it doesn't look empty */
+      .hero-photo { display: none; }
+      .hero::after {
+        content: ''; position: absolute;
+        top: -20%; right: -10%; width: 55%; height: 140%;
+        background: radial-gradient(ellipse at center, rgba(248,96,99,0.09) 0%, transparent 65%);
+        pointer-events: none;
+      }
+      .hero-sub { font-size: 1rem; }
+      .hero-inner { max-width: 680px; }
+
+      /* Two-col grids collapse */
+      .problem-grid,
+      .trust-grid,
+      .promise-grid { grid-template-columns: 1fr; gap: 40px; }
+      .stats-panel { order: -1; }
+
+      /* How it works */
+      .steps { grid-template-columns: 1fr; gap: 24px; }
+      .steps-line { display: none; }
+      .step {
+        text-align: left; display: flex;
+        gap: 20px; align-items: flex-start;
+      }
+      .step-num { margin: 0; flex-shrink: 0; width: 52px; height: 52px; font-size: 1.2rem; }
+
+      /* Services */
+      .visit-cards { grid-template-columns: 1fr; }
+      .vcard { padding: 32px 28px; }
+
+      /* Pricing */
+      .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+
+      /* Trust features */
+      .tfeatures { grid-template-columns: 1fr 1fr; gap: 14px; }
+
+      /* Promise card */
+      .promise-grid { gap: 40px; }
+      .promise-card { padding: 40px 32px; }
+    }
+
+    /* ================================================
+       RESPONSIVE — Tablet portrait  (≤ 768px)
+    ================================================= */
+    @media (max-width: 768px) {
+      :root { --sp: 56px; }
+
+      /* Hero: let content dictate height, no forced viewport lock */
+      .hero { min-height: auto; }
+      .hero-inner { padding: 72px 0 64px; }
+
+      /* Footer: 2-col grid with brand spanning full width */
+      .footer-top {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        flex-wrap: unset;
+      }
+      .footer-brand { grid-column: 1 / -1; }
+
+      /* Ensure hero proof items don't overflow */
+      .hero-proof { flex-wrap: wrap; gap: 16px; }
+
+      /* Shrink promise card a little more */
+      .promise-card { padding: 36px 28px; }
+
+      /* Pricing max-width for tablets */
+      .pricing-grid { max-width: 380px; }
+
+      /* FAQ touch target */
+      .faq-btn { padding: 20px 0; min-height: 60px; }
+    }
+
+    /* ================================================
+       RESPONSIVE — Mobile  (≤ 600px)
+    ================================================= */
+    @media (max-width: 600px) {
+      :root { --sp: 48px; }
+
+      /* Tighter horizontal padding */
+      .wrap { padding: 0 20px; }
+
+      /* Hero: auto height, generous internal padding */
+      .hero { min-height: auto; }
+      .hero-inner { padding: 64px 0 52px; max-width: 100%; }
+      .hero-sub { font-size: 0.97rem; max-width: 100%; }
+
+      /* CTAs: full-width stacked, centered text */
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas .btn { justify-content: center; width: 100%; white-space: normal; }
+
+      /* Proof strip: wrap tightly */
+      .hero-proof { gap: 10px; padding-top: 20px; flex-wrap: wrap; }
+      .hero-proof-item { font-size: 0.8rem; }
+
+      /* Location strip: let chips wrap, smaller gap */
+      .lstrip { padding: 14px 0; }
+      .lstrip-inner { gap: 6px; justify-content: flex-start; padding: 0 4px; }
+
+      /* Section heading: reduce bottom gap */
+      .sh { margin-bottom: 36px; }
+
+      /* Steps */
+      .step { gap: 14px; }
+      .step-num { width: 44px; height: 44px; font-size: 1rem; flex-shrink: 0; }
+
+      /* Services / visit cards */
+      .vcard { padding: 24px 18px; }
+      .credit-note { padding: 20px 18px; }
+
+      /* Pricing: cards full-width, buttons full-width */
+      .pricing-grid { max-width: 100%; }
+      .pcard { padding: 32px 22px; }
+      .pcard .btn { width: 100%; justify-content: center; white-space: normal; }
+
+      /* Promise */
+      .promise-grid { gap: 28px; }
+      .promise-card { padding: 28px 18px; }
+      .promise-card p { font-size: 0.88rem; }
+      .promise-card .aside-note { font-size: 0.76rem; padding: 14px 14px; }
+      .sq-visual { width: 100%; max-width: 190px; }
+
+      /* Trust */
+      .trust-grid { gap: 32px; }
+      .tfeatures { grid-template-columns: 1fr; gap: 12px; }
+      .tfeature { padding: 20px 18px; }
+
+      /* FAQ */
+      .faq-btn { min-height: 56px; padding: 18px 0; }
+      .faq-btn span { font-size: 0.92rem; }
+      .faq-body p { font-size: 0.9rem; }
+
+      /* Final CTA */
+      .fcta { padding: 80px 0; }
+      .fcta-btns { flex-direction: column; align-items: stretch; }
+      .fcta-btns .btn { justify-content: center; white-space: normal; }
+
+      /* Footer */
+      .footer-top { display: flex; flex-direction: column; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
+
+      /* Floating WA button: safe-area aware */
+      .wa-float {
+        width: 52px; height: 52px;
+        bottom: max(20px, calc(12px + env(safe-area-inset-bottom)));
+        right: max(18px, calc(10px + env(safe-area-inset-right)));
+      }
+
+      /* Mobile nav: slightly smaller type */
+      .mobile-nav a { font-size: 1.75rem; }
+      .mobile-close { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; }
+
+      /* Footer safe-area */
+      .footer { padding-bottom: max(32px, calc(20px + env(safe-area-inset-bottom))); }
+    }
+
+    /* ================================================
+       RESPONSIVE — Small phones  (≤ 390px)
+    ================================================= */
+    @media (max-width: 390px) {
+      :root { --sp: 40px; }
+      .wrap { padding: 0 16px; }
+
+      /* Hero heading: tighten on tiny screens */
+      .hero h1 { font-size: clamp(1.85rem, 8vw, 2.4rem); }
+      .hero-pill { font-size: 0.64rem; letter-spacing: 1.2px; padding: 5px 12px; }
+      .hero-inner { padding: 52px 0 44px; }
+      .hero-sub { font-size: 0.93rem; }
+
+      /* Cards */
+      .vcard { padding: 20px 16px; }
+      .pcard { padding: 28px 18px; }
+      .pcard-price { font-size: 2.4rem; }
+      .promise-card { padding: 24px 14px; }
+      .tfeature { padding: 18px 14px; }
+
+      /* Buttons — all full-width on tiny phones */
+      .btn { padding: 13px 20px; font-size: 0.88rem; white-space: normal; }
+      .btn-lg { padding: 15px 26px; }
+
+      /* Steps */
+      .step-num { width: 40px; height: 40px; font-size: 0.9rem; }
+
+      /* Proof items: tighter */
+      .hero-proof-item { font-size: 0.76rem; }
+      .hero-proof { gap: 8px; }
+
+      /* Section heading: tighter on small phones */
+      .sh { margin-bottom: 28px; }
+      .sh p { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ================================================
+     SVG SYMBOLS
+================================================= -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+
+  <!--
+    LOGO MARK – The Host Standard circular seal
+    Close recreation of the uploaded logo:
+    - Double concentric ring
+    - "THE HOST" curved along top arc
+    - "STANDARD" curved along bottom arc
+    - 4-pointed sparkles at 9 and 3 o'clock
+    - Interlocked HS monogram centre
+
+    Usage:
+    - Dark bg: <svg class="…" style="color:white"><use href="#logo"/></svg>
+    - Light bg with real PNG: <img src="assets/logo.png" class="logo-img">
+  -->
+  <symbol id="logo" viewBox="0 0 200 200">
+    <!--
+      SVG recreation of The Host Standard circular seal.
+      Used as fallback when assets/logo.png is unavailable.
+      Color inherits via currentColor – works on dark (white) and light (coral) backgrounds.
+    -->
+
+    <!-- Outer ring – thin, close to inner ring like the actual seal -->
+    <circle cx="100" cy="100" r="96.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <!-- Inner ring -->
+    <circle cx="100" cy="100" r="89.5" fill="none" stroke="currentColor" stroke-width="1"/>
+
+    <defs>
+      <!-- Top arc: THE HOST – clockwise through top, text faces outward -->
+      <path id="l-top" d="M 7.5,100 A 92.5,92.5 0 0,1 192.5,100"/>
+      <!-- Bottom arc: STANDARD – note path goes R→L through bottom so text faces outward -->
+      <path id="l-bot" d="M 25,150 A 92,92 0 0,0 175,150"/>
+    </defs>
+
+    <!-- THE HOST – top arc -->
+    <text font-family="'Playfair Display', Georgia, serif"
+          font-size="15" letter-spacing="6.5" fill="currentColor">
+      <textPath href="#l-top" startOffset="50%" text-anchor="middle">THE HOST</textPath>
+    </text>
+
+    <!-- STANDARD – bottom arc -->
+    <text font-family="'Playfair Display', Georgia, serif"
+          font-size="15" letter-spacing="4.5" fill="currentColor">
+      <textPath href="#l-bot" startOffset="50%" text-anchor="middle">STANDARD</textPath>
+    </text>
+
+    <!-- ✦ Sparkle cluster – left, 9 o'clock
+         Two 4-pointed stars: one larger, one smaller above -->
+    <text x="10" y="106" font-size="10" text-anchor="middle" fill="currentColor">✦</text>
+    <text x="13"  y="93"  font-size="6.5" text-anchor="middle" fill="currentColor">✦</text>
+
+    <!-- ✦ Sparkle cluster – right, 3 o'clock -->
+    <text x="190" y="106" font-size="10" text-anchor="middle" fill="currentColor">✦</text>
+    <text x="187" y="93"  font-size="6.5" text-anchor="middle" fill="currentColor">✦</text>
+
+    <!--
+      HS Monogram – interlocked ligature.
+      H: large, upright, bold serif – dominant element.
+      S: calligraphic italic, positioned to overlap the right side of H,
+         creating the woven/intertwined effect seen in the actual seal.
+    -->
+    <text x="60" y="130"
+          font-family="'Playfair Display', Georgia, serif"
+          font-size="76" font-weight="700"
+          fill="currentColor">H</text>
+    <text x="104" y="128"
+          font-family="'Playfair Display', Georgia, serif"
+          font-size="70" font-weight="600" font-style="italic"
+          fill="currentColor">S</text>
+  </symbol>
+
+  <!-- WhatsApp -->
+  <symbol id="ico-wa" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </symbol>
+
+  <!-- Arrow -->
+  <symbol id="ico-arrow" viewBox="0 0 24 24" fill="none">
+    <path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+  </symbol>
+
+</svg>
+
+
+<!-- ================================================
+     NAVIGATION
+================================================= -->
+<nav class="nav" role="navigation">
+  <div class="wrap nav-inner">
+
+    <a href="#" class="nav-brand" aria-label="The Host Standard – home">
+      <!--
+        LOGO: Drop your logo PNG at assets/logo.png
+        The filter: brightness(0) invert(1) turns it white on this dark nav.
+      -->
+      <img
+        src="assets/logo.png"
+        alt="The Host Standard"
+        class="nav-brand-logo logo-img logo-img-white"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
+        width="40" height="40">
+      <svg class="nav-brand-logo" style="display:none; color:white" aria-hidden="true">
+        <use href="#logo"/>
+      </svg>
+      <span class="nav-brand-name">The Host<br>Standard</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#how-it-works">How it works</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a href="https://wa.me/254798913341?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20The%20Host%20Standard." class="btn btn-coral">
+        <svg width="14" height="14"><use href="#ico-wa"/></svg>
+        Get started
+      </a>
+    </div>
+
+    <button class="hamburger" aria-label="Open menu"
+      onclick="document.getElementById('mobile-nav').classList.add('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobile-nav" role="dialog">
+  <button class="mobile-close" onclick="this.closest('.mobile-nav').classList.remove('open')">✕</button>
+  <a href="#how-it-works" onclick="document.getElementById('mobile-nav').classList.remove('open')">How it works</a>
+  <a href="#services" onclick="document.getElementById('mobile-nav').classList.remove('open')">Services</a>
+  <a href="#pricing" onclick="document.getElementById('mobile-nav').classList.remove('open')">Pricing</a>
+  <a href="#about" onclick="document.getElementById('mobile-nav').classList.remove('open')">About</a>
+  <a href="#faq" onclick="document.getElementById('mobile-nav').classList.remove('open')">FAQ</a>
+  <a href="https://wa.me/254798913341?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20The%20Host%20Standard."
+     class="btn btn-coral btn-lg" style="margin-top:8px">WhatsApp us</a>
+</div>
+
+
+<!-- ================================================
+     HERO
+================================================= -->
+<section class="hero">
+  <!--
+    HERO PHOTO – Squeaky Clean tent card on marble table.
+    Save the tent card photo as: assets/hero-card.jpg
+    Gradient overlay blends left edge into the dark nav/hero background.
+  -->
+  <div class="hero-photo">
+    <img
+      src="assets/hero-card.jpg"
+      alt="The Host Standard Squeaky Clean tent card on a marble table in a luxury Airbnb"
+      aria-hidden="true">
+  </div>
+
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-pill">
+        <span class="hero-pill-dot"></span>
+        Nairobi's Airbnb &amp; short-term rental cleaning service
+      </div>
+
+      <h1>Cleaned to <em>The</em> Standard.<br>Every time.</h1>
+
+      <p class="hero-sub">
+        Professional cleaning for Airbnb and short-term rental hosts in Nairobi. A uniformed, vetted team handles every checkout – and sends you before-and-after photos within 15 minutes of finishing. One monthly subscription. Zero logistics on your end.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="https://wa.me/254798913341?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20The%20Host%20Standard%20for%20my%20Airbnb."
+           class="btn btn-wa btn-lg">
+          <svg width="18" height="18"><use href="#ico-wa"/></svg>
+          WhatsApp us to get started
+        </a>
+        <a href="#pricing" class="btn btn-ghost btn-lg">
+          See pricing
+          <svg width="15" height="15"><use href="#ico-arrow"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-proof">
+        <div class="hero-proof-item">
+          <div class="proof-tick">✓</div>
+          Photos within 15 minutes of every clean
+        </div>
+        <div class="hero-proof-item">
+          <div class="proof-tick">✓</div>
+          Minimum two team members, always
+        </div>
+        <div class="hero-proof-item">
+          <div class="proof-tick">✓</div>
+          One flat monthly subscription
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     LOCATION STRIP
+================================================= -->
+<div class="lstrip">
+  <div class="wrap">
+    <div class="lstrip-inner">
+      <span class="lstrip-label">Now serving</span>
+      <span class="lchip"><span class="lchip-dot"></span>Westlands</span>
+      <span class="lchip"><span class="lchip-dot"></span>Kilimani</span>
+      <span class="lchip"><span class="lchip-dot"></span>Lavington</span>
+      <span class="lchip"><span class="lchip-dot"></span>Parklands</span>
+      <span class="lchip"><span class="lchip-dot"></span>Kileleshwa</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================================================
+     THE PROBLEM
+================================================= -->
+<section class="section problem" id="problem">
+  <div class="wrap">
+    <div class="problem-grid">
+
+      <div class="problem-copy reveal">
+        <span class="eyebrow">Sound familiar?</span>
+        <h2>Managing your Airbnb cleaning is a part-time job you didn't sign up for.</h2>
+        <p>Most Nairobi Airbnb and short-term rental hosts are either doing it themselves or chasing cleaners who show up late, cancel without notice, or leave the unit not quite right. You find out when the guest messages – or worse, when the review lands.</p>
+
+        <ul class="pain-list">
+          <li class="pain-item">
+            <div class="pain-icon">✗</div>
+            <div>
+              <h4>You don't know if it's ready until you check</h4>
+              <p>No confirmation, no photos, no visibility. Every checkout is a question mark until you get there yourself.</p>
+            </div>
+          </li>
+          <li class="pain-item">
+            <div class="pain-icon">✗</div>
+            <div>
+              <h4>Reliable cleaners are hard to find and harder to keep</h4>
+              <p>The good ones are overcommitted. The available ones are inconsistent. And training new ones costs you time and energy you can't afford.</p>
+            </div>
+          </li>
+          <li class="pain-item">
+            <div class="pain-icon">✗</div>
+            <div>
+              <h4>One bad review on cleanliness changes everything</h4>
+              <p>A single mention of "not clean" can cost a Superhost their status, their occupancy rate, and weeks of income. The algorithm doesn't forgive easily.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="stats-panel reveal d2">
+        <div class="stat-card">
+          <div class="stat-n">15 min</div>
+          <div class="stat-l">Before-and-after photos sent to your WhatsApp after every clean. Not end of day – 15 minutes.</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-n">2 people</div>
+          <div class="stat-l">On every job, always. Both uniformed, ID-verified, and reference-checked. No solo cleans.</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-n">Zero</div>
+          <div class="stat-l">Calls to chase your cleaner. We confirm, we arrive, we clean, we send photos. You just open WhatsApp.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     HOW IT WORKS
+================================================= -->
+<section class="section how" id="how-it-works">
+  <div class="wrap">
+    <div class="sh center reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>Three steps. Then you never think about it again.</h2>
+      <p>From the day you subscribe to every subsequent checkout – here's exactly what happens.</p>
+    </div>
+
+    <div class="steps">
+      <div class="steps-line" aria-hidden="true"></div>
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <div>
+          <h3>You subscribe</h3>
+          <p>Tell us your unit size and location. We visit for a brief onboarding walkthrough, collect your key, and align with your booking calendar. One flat monthly fee – nothing else to think about.</p>
+        </div>
+      </div>
+      <div class="step reveal d1">
+        <div class="step-num">2</div>
+        <div>
+          <h3>We handle every checkout</h3>
+          <p>Every time a guest checks out, our uniformed team arrives and cleans to The Host Standard. Hotel-quality bed-making, full staging, every room documented. For longer stays, we visit every other day to keep things fresh.</p>
+        </div>
+      </div>
+      <div class="step reveal d2">
+        <div class="step-num">3</div>
+        <div>
+          <h3>You get the photos</h3>
+          <p>Before-and-after photos land in your WhatsApp within 15 minutes of completion. You see exactly what your next guest walks into. Squeaky Clean tent card on the table. Unit ready. Done.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     SERVICES / VISIT TYPES
+================================================= -->
+<section class="section visits" id="services">
+  <div class="wrap">
+    <div class="sh reveal">
+      <span class="eyebrow">The service</span>
+      <h2>Two types of visit. One monthly subscription.</h2>
+      <p>Your subscription covers both. You don't manage the schedule – we do.</p>
+    </div>
+
+    <div class="visit-cards">
+      <div class="vcard reveal">
+        <span class="vcard-badge">Every other day</span>
+        <h3>Maintenance Visit</h3>
+        <p>Think hotel housekeeping – the kind that makes a room feel attended to without turning it over completely. Bathrooms cleaned, towels changed if dirty, bedding refreshed when needed, surfaces wiped, dusting and vacuuming where required. The place is left fresh. Guests who prefer not to be disturbed can decline – those visits don't count against your monthly total.</p>
+        <ul class="vcard-list">
+          <li>Bathrooms fully cleaned – not just checked</li>
+          <li>Towels washed and rehung if dirty</li>
+          <li>Bedding changed when needed</li>
+          <li>All surfaces wiped, dusted, mopped</li>
+          <li>Vacuuming where required</li>
+          <li>Laundry service for extended stays (included)</li>
+          <li>Any issues flagged to you immediately</li>
+        </ul>
+      </div>
+
+      <div class="vcard hero-v reveal d1">
+        <span class="vcard-badge">Every checkout</span>
+        <h3>Checkout / Check-in Clean</h3>
+        <p>The full turnover. Every time a guest leaves – regardless of whether we were there the day before. This is The Host Standard in practice: documented, hotel-grade, non-negotiable.</p>
+        <ul class="vcard-list">
+          <li>Full clean of all rooms, bathrooms, and kitchen</li>
+          <li>Hotel-standard bed-making – tight, staged, no creases</li>
+          <li>Unit fully guest-ready on completion</li>
+          <li>Squeaky Clean tent card placed on the table</li>
+          <li>Before-and-after photos via WhatsApp within 15 min</li>
+          <li>Damage and maintenance issues flagged immediately</li>
+          <li>Guest belongings found? Photographed, host notified</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="credit-note reveal">
+      <h4>The 20-visit credit model</h4>
+      <p>Your subscription includes up to 20 completed visits per billing period across both visit types – the same for all unit sizes. When a long-stay guest declines a maintenance visit, that credit stays available for the back-to-back checkout periods that follow. Credits do not roll over: your billing period runs month-to-month from the anniversary of your sign-up date, and unused visits expire at each period end. The model works with your occupancy pattern, not against it.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     PRICING
+================================================= -->
+<section class="section pricing" id="pricing">
+  <div class="wrap">
+    <div class="sh center reveal">
+      <span class="eyebrow">Pricing</span>
+      <h2>One subscription. Everything included.</h2>
+      <p>No per-clean invoices. No surprise charges. One monthly payment and a unit that's always ready.</p>
+    </div>
+
+    <div class="pricing-grid">
+
+      <div class="pcard reveal">
+        <div class="pcard-lbl">1 Bedroom</div>
+        <h3>1BR Unit</h3>
+        <div class="pcard-price">15K</div>
+        <div class="pcard-per">KES per month</div>
+        <hr class="pcard-div">
+        <ul class="pcard-feats">
+          <li>Up to 20 completed visits/month</li>
+          <li>All checkout / check-in cleans</li>
+          <li>Every-other-day maintenance visits</li>
+          <li>Before-and-after photos, every clean</li>
+          <li>WhatsApp scheduling and reporting</li>
+          <li>Squeaky Clean tent card on every turnover</li>
+          <li>Key holding with full sign-in/out log</li>
+        </ul>
+        <a href="https://wa.me/254798913341?text=Hi%2C%20I%27m%20interested%20in%20the%201-bedroom%20plan."
+           class="btn btn-coral">
+          <svg width="14" height="14"><use href="#ico-wa"/></svg> Get started
+        </a>
+        <p class="pcard-note">Overage visits above 20: KES 1,000/visit</p>
+      </div>
+
+      <div class="pcard star reveal d1">
+        <div class="pcard-lbl">2 Bedrooms · Most popular</div>
+        <h3>2BR Unit</h3>
+        <div class="pcard-price">18K</div>
+        <div class="pcard-per">KES per month</div>
+        <hr class="pcard-div">
+        <ul class="pcard-feats">
+          <li>Up to 20 completed visits/month</li>
+          <li>All checkout / check-in cleans</li>
+          <li>Every-other-day maintenance visits</li>
+          <li>Before-and-after photos, every clean</li>
+          <li>WhatsApp scheduling and reporting</li>
+          <li>Squeaky Clean tent card on every turnover</li>
+          <li>Key holding with full sign-in/out log</li>
+        </ul>
+        <a href="https://wa.me/254798913341?text=Hi%2C%20I%27m%20interested%20in%20the%202-bedroom%20plan."
+           class="btn btn-white">
+          <svg width="14" height="14"><use href="#ico-wa"/></svg> Get started
+        </a>
+        <p class="pcard-note">Overage visits above 20: KES 1,300/visit</p>
+      </div>
+
+      <div class="pcard reveal d2">
+        <div class="pcard-lbl">3 Bedrooms</div>
+        <h3>3BR Unit</h3>
+        <div class="pcard-price">22K</div>
+        <div class="pcard-per">KES per month</div>
+        <hr class="pcard-div">
+        <ul class="pcard-feats">
+          <li>Up to 20 completed visits/month</li>
+          <li>All checkout / check-in cleans</li>
+          <li>Every-other-day maintenance visits</li>
+          <li>Before-and-after photos, every clean</li>
+          <li>WhatsApp scheduling and reporting</li>
+          <li>Squeaky Clean tent card on every turnover</li>
+          <li>Key holding with full sign-in/out log</li>
+        </ul>
+        <a href="https://wa.me/254798913341?text=Hi%2C%20I%27m%20interested%20in%20the%203-bedroom%20plan."
+           class="btn btn-coral">
+          <svg width="14" height="14"><use href="#ico-wa"/></svg> Get started
+        </a>
+        <p class="pcard-note">Overage visits above 20: KES 1,600/visit</p>
+      </div>
+
+    </div>
+
+    <p class="pricing-foot">
+      All plans are covered by a standard service agreement. New clients pay a one-month refundable security deposit on signing, held against any outstanding invoices.<br>
+      Either party may exit with 30 days' written notice. Ad-hoc cleans, deep cleans, carpet and laundry services quoted separately.
+    </p>
+  </div>
+</section>
+
+
+<!-- ================================================
+     THE SQUEAKY CLEAN PROMISE
+================================================= -->
+<section class="section promise" id="the-standard">
+  <div class="wrap">
+    <div class="promise-grid">
+
+      <div class="promise-copy reveal">
+        <span class="eyebrow eyebrow-light">Our promise</span>
+        <h2>The Squeaky Clean Standard.</h2>
+        <p>Every checkout clean ends the same way: a Squeaky Clean tent card placed on the table, and before-and-after photos in your WhatsApp before our team leaves the building. Not a promise for later – within 15 minutes of the job being done.</p>
+        <p>This is The Standard. Every property. Every clean. No exceptions.</p>
+
+        <div class="pillars">
+          <div class="pillar">
+            <div class="pillar-icon">📸</div>
+            <div>
+              <h4>Before-and-after photos on every clean</h4>
+              <p>You see the state of your unit on arrival and on completion. If something was wrong when we arrived, you know before we leave.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">👥</div>
+            <div>
+              <h4>Minimum two team members, always</h4>
+              <p>Both uniformed, ID-verified, and reference-checked. No solo cleans. Your property is never in the hands of a single person.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🔑</div>
+            <div>
+              <h4>Key security, documented every time</h4>
+              <p>Keys are signed out before each job and signed back in after. A full register is maintained and available on request.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">⚡</div>
+            <div>
+              <h4>Issues flagged the moment they're found</h4>
+              <p>Damage, maintenance problems, guest belongings – you hear immediately, with photos. Not at end of day. Now.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="promise-card reveal d2">
+        <div class="sq-visual">
+          <!-- Logo on the Squeaky Clean card visual -->
+          <img
+            src="assets/logo.png"
+            alt="The Host Standard logo"
+            class="sq-visual-logo logo-img-white"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
+            width="38" height="38">
+          <svg class="sq-visual-logo" style="display:none; color:rgba(255,255,255,0.85)">
+            <use href="#logo"/>
+          </svg>
+          <span class="sq-visual-txt">★ SQUEAKY CLEAN ★</span>
+        </div>
+        <h3>The tent card on the table.</h3>
+        <p>Every checkout clean ends with a Squeaky Clean tent card – folded into an inverted V, coral matte with a spot UV finish – placed on the table. Front: <em>★ Squeaky Clean ★</em> and the date cleaned. Back: <em>"This space was professionally cleaned and prepared for your arrival by The Host Standard. Your host has chosen The Host Standard to care for this property."</em></p>
+        <p>Maintenance visits get a different card – smaller, cream stock, same branding. It reads <em>Refreshed.</em> on the front, with a simple note of what was done that day on the back. Guests on longer stays see it as attentive housekeeping. When a new guest checks in to the full coral tent card, its weight is intact – because it was never diluted.</p>
+        <div class="aside-note">
+          Need cleaning supplies? We can source and deliver what your unit needs – linen, cleaning products, guest amenities – invoiced as an add-on. Just let us know.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     TRUST / ABOUT
+================================================= -->
+<section class="section trust" id="about">
+  <div class="wrap">
+    <div class="trust-grid">
+
+      <div class="reveal">
+        <span class="eyebrow">About us</span>
+        <h2>Built by people who are already inside these buildings.</h2>
+        <p>The Host Standard was founded on one insight: the Nairobi hosts running short-term rentals who most need a reliable, professional cleaning service are the ones most let down by existing options.</p>
+        <p>We're not a cleaning marketplace or an agency. We're a service built with operational discipline – every clean documented, every team member accountable, every host kept in the loop in real time.</p>
+
+        <div class="founders">
+          <div class="founder">
+            <div class="founder-av">C</div>
+            <div>
+              <h4>Cindy</h4>
+              <div class="founder-role">Partnerships Lead · Co-founder</div>
+              <p>Six years as an Airbnb host – managing up to 15 units across Nairobi, Nakuru, and Kisumu – gave Cindy an exact picture of what hosts need and how rarely they get it. She leads business strategy, client relationships, and everything that brings new hosts to The Host Standard.</p>
+            </div>
+          </div>
+          <div class="founder">
+            <div class="founder-av">CM</div>
+            <div>
+              <h4>Christina Moseti</h4>
+              <div class="founder-role">Guest Relations Lead · Co-founder</div>
+              <p>Six years cleaning and running operations across up to eleven short-term rental properties in Nairobi. Christina knows exactly what a proper turnover takes – and what corners look like when they've been cut. She leads every team, manages every schedule, and signs off on every clean.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tfeatures reveal d2">
+        <div class="tfeature">
+          <div class="tfeature-icon">🪪</div>
+          <h4>ID verified</h4>
+          <p>Every team member is ID-verified and reference-checked before their first job – no exceptions.</p>
+        </div>
+        <div class="tfeature">
+          <div class="tfeature-icon">👔</div>
+          <h4>Uniformed</h4>
+          <p>Our team arrives in uniform on every job. Your guests and building management know exactly who's in the building.</p>
+        </div>
+        <div class="tfeature">
+          <div class="tfeature-icon">🔒</div>
+          <h4>Key security</h4>
+          <p>Full key register. Signed in and out every job. Stored securely between visits by the Head of Operations.</p>
+        </div>
+        <div class="tfeature">
+          <div class="tfeature-icon">📋</div>
+          <h4>Fully documented</h4>
+          <p>Every clean logged, photographed, and tracked. You have a full record available on request.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     FAQ
+================================================= -->
+<section class="section faq" id="faq">
+  <div class="wrap">
+    <div class="sh center reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common questions.</h2>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>What's the difference between a maintenance visit and a checkout clean?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-body">
+          <p>A maintenance visit is hotel housekeeping – bathrooms fully cleaned, towels changed if dirty, bedding refreshed when needed, surfaces wiped, dusted, mopped, vacuumed. The unit is left fresh. A checkout clean is the guaranteed full turnover: bedding always changed, every room cleaned to The Host Standard, unit fully staged, before-and-after photos sent to you. Both are included in your subscription.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>What if my guest declines a maintenance visit?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-body">
+          <p>No problem – guests can decline if they prefer not to be disturbed. When they do, that visit simply doesn't count against your 20-visit total for that billing period. Credits do not roll over to the following month – your billing period runs from the anniversary of your sign-up date. Checkout cleans are mandatory regardless.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>What happens if I need more than 20 cleans in a month?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-body">
+          <p>Each completed visit above 20 is billed at the overage rate: KES 700 (1BR), KES 900 (2BR), or KES 1,100 (3BR). These are invoiced separately at month end, clearly itemised. Most months you won't reach the cap – especially when long-stay guests decline some maintenance visits.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Who provides the cleaning supplies?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-body">
+          <p>Cleaning supplies are provided by you, the host, and kept at the property. We'll flag when supplies are running low. If you'd rather not manage it, we can source and supply what's needed – cleaning products, linen, or guest amenities – invoiced as a simple add-on to your subscription.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>How does communication work?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-body">
+          <p>Everything runs through one WhatsApp Business number. You receive 24-hour advance notice before each scheduled clean, before-and-after photos within 15 minutes of every completed job, and any damage or maintenance alerts the moment they're found – with photos. You always deal with the company, not individual cleaners.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Can I pause service if my unit is unoccupied?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-body">
+          <p>Yes. Give us 7 days' written notice and we'll pause your subscription for the unoccupied period. Your service resumes on an agreed restart date. Either party can exit the agreement with 30 days' written notice via WhatsApp or email.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Which areas do you cover?</span>
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-body">
+          <p>We currently operate in Westlands, Kilimani, Lavington, Parklands, and Kileleshwa. If your unit is just outside these areas, WhatsApp us and we'll confirm whether we can accommodate you.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     FINAL CTA
+================================================= -->
+<section class="fcta">
+  <div class="wrap fcta-inner reveal">
+    <h2><em>Ready to hand this over?</em></h2>
+    <p>Your next checkout is already on the calendar. Let us handle it – and every one after that.</p>
+    <div class="fcta-btns">
+      <a href="https://wa.me/254798913341?text=Hi%2C%20I%27d%20like%20to%20start%20with%20The%20Host%20Standard%20for%20my%20Airbnb."
+         class="btn btn-wa btn-lg">
+        <svg width="18" height="18"><use href="#ico-wa"/></svg>
+        WhatsApp us to get started
+      </a>
+      <a href="#pricing" class="btn btn-ghost btn-lg">See pricing</a>
+    </div>
+    <p class="fcta-note">From KES 15,000/month &nbsp;·&nbsp; Standard service agreement &nbsp;·&nbsp; One-month refundable deposit on signing</p>
+  </div>
+</section>
+
+
+<!-- ================================================
+     FOOTER
+================================================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <img
+          src="assets/logo.png"
+          alt="The Host Standard"
+          class="footer-brand-logo logo-img logo-img-white"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
+          width="42" height="42">
+        <svg class="footer-brand-logo" style="display:none; color:rgba(255,255,255,0.6)">
+          <use href="#logo"/>
+        </svg>
+        <div class="footer-brand-name">The Host Standard Limited</div>
+        <p>Professional cleaning for short-term rental hosts in Nairobi. Cleaned to The Standard – every checkout, every time.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#the-standard">The Standard</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Locations</h5>
+        <ul>
+          <li><a href="#problem">Westlands</a></li>
+          <li><a href="#problem">Kilimani</a></li>
+          <li><a href="#problem">Lavington</a></li>
+          <li><a href="#problem">Parklands</a></li>
+          <li><a href="#problem">Kileleshwa</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li>
+            <a href="https://wa.me/254798913341" class="footer-wa">
+              <svg width="15" height="15"><use href="#ico-wa"/></svg>
+              +254 798 913 341
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/254798913341?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20The%20Host%20Standard."
+               style="color:rgba(255,255,255,0.7); font-size:0.84rem">
+              Send us a message
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Host Standard Limited. All rights reserved. Nairobi, Kenya.</p>
+      <p>Airbnb cleaning &middot; Nairobi &middot; Westlands &middot; Kilimani &middot; Lavington</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ================================================
+     FLOATING WHATSAPP
+================================================= -->
+<a href="https://wa.me/254798913341?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20The%20Host%20Standard."
+   class="wa-float" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28"><use href="#ico-wa"/></svg>
+</a>
+
+
+<!-- ================================================
+     JAVASCRIPT
+================================================= -->
+<script>
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const open = item.classList.contains('is-open');
+    document.querySelectorAll('.faq-item.is-open').forEach(el => {
+      el.classList.remove('is-open');
+      el.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
+    });
+    if (!open) {
+      item.classList.add('is-open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // Scroll reveal
+  const ro = new IntersectionObserver(
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); }
+    }),
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+  // Close mobile nav on outside tap
+  document.addEventListener('click', e => {
+    const nav = document.getElementById('mobile-nav');
+    if (nav.classList.contains('open') && !nav.contains(e.target) && !e.target.closest('.hamburger')) {
+      nav.classList.remove('open');
+    }
+  });
+</script>
+
+
+<!-- ================================================
+     STRUCTURED DATA – LOCAL BUSINESS + SERVICE + WEBSITE
+================================================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://thehoststandard.co.ke/#business",
+      "name": "The Host Standard Limited",
+      "description": "Professional Airbnb turnover cleaning service in Nairobi, Kenya. Uniformed teams, before-and-after photos within 15 minutes of every checkout, monthly subscriptions from KES 15,000.",
+      "url": "https://thehoststandard.co.ke/",
+      "logo": "https://thehoststandard.co.ke/assets/logo.png",
+      "telephone": "+254798913341",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nairobi",
+        "addressRegion": "Nairobi County",
+        "addressCountry": "KE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-1.2921",
+        "longitude": "36.8219"
+      },
+      "areaServed": [
+        {"@type": "Place", "name": "Westlands, Nairobi"},
+        {"@type": "Place", "name": "Kilimani, Nairobi"},
+        {"@type": "Place", "name": "Lavington, Nairobi"},
+        {"@type": "Place", "name": "Parklands, Nairobi"},
+        {"@type": "Place", "name": "Kileleshwa, Nairobi"}
+      ],
+      "priceRange": "KES 15,000–22,000/month",
+      "openingHours": "Mo-Su 06:00-22:00",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+254798913341",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Swahili"]
+      },
+      "founder": [
+        {"@type": "Person", "name": "Cindy", "jobTitle": "Partnerships Lead"},
+        {"@type": "Person", "name": "Christina Moseti", "jobTitle": "Guest Relations Lead"}
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://thehoststandard.co.ke/",
+      "name": "The Host Standard",
+      "description": "Professional Airbnb turnover cleaning in Nairobi, Kenya"
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Airbnb Turnover Cleaning",
+      "provider": {"@id": "https://thehoststandard.co.ke/#business"},
+      "areaServed": "Nairobi, Kenya",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Monthly Cleaning Subscriptions",
+        "itemListElement": [
+          {"@type": "Offer", "name": "1 Bedroom Plan", "price": "10000", "priceCurrency": "KES"},
+          {"@type": "Offer", "name": "2 Bedroom Plan", "price": "12000", "priceCurrency": "KES"},
+          {"@type": "Offer", "name": "3 Bedroom Plan", "price": "15000", "priceCurrency": "KES"}
+        ]
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
