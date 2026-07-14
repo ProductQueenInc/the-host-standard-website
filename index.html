@@ -686,24 +686,17 @@
     .reviews-track::-webkit-scrollbar { height: 6px; }
     .reviews-track::-webkit-scrollbar-thumb { background: var(--coral-mid); border-radius: var(--r-full); }
     .review-card {
-      flex: 0 0 auto; width: 340px;
+      flex: 0 0 auto; width: 340px; aspect-ratio: 16 / 9;
       border-radius: var(--r-md); overflow: hidden;
       border: 1px solid var(--border); box-shadow: var(--sh-xs);
-      scroll-snap-align: start; background: #fff;
-      display: flex; flex-direction: column;
+      scroll-snap-align: start; background: #b5433f;
+      position: relative;
     }
-    .review-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
-    .review-card blockquote {
-      padding: 18px 20px 20px; flex: 1;
-      display: flex; flex-direction: column; gap: 10px;
+    .review-card img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .review-text-hidden {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
     }
-    .review-card blockquote p {
-      font-size: 0.9rem; line-height: 1.65; color: var(--text); flex: 1;
-    }
-    .review-card blockquote footer {
-      font-size: 0.8rem; color: var(--muted);
-    }
-    .review-card blockquote cite { font-style: normal; font-weight: 600; color: var(--text); }
     .reviews-hint {
       text-align: center; color: var(--muted); font-size: 0.82rem;
       margin-top: 4px;
@@ -1666,91 +1659,58 @@
     <div class="reviews-track">
 
       <div class="review-card reveal">
-        <img src="assets/reviews/review-01.jpg" alt="Airbnb screenshot: Edmund, 8 years on Airbnb, five-star review October 2025 — 'The home is spotless and feels like a luxury hotel room'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
-        <blockquote>
-          <p>"Had an absolutely perfect stay. The home is spotless and feels like a luxury hotel room. Can't recommend enough!"</p>
-          <footer><cite>Edmund</cite> · October 2025 · Stayed a few nights</footer>
-        </blockquote>
+        <img src="assets/reviews/review-01.jpg" alt="Airbnb screenshot: Edmund, 8 years on Airbnb, five-star review October 2025 — The home is spotless and feels like a luxury hotel room" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <span class="review-text-hidden">Edmund, 8 years on Airbnb, October 2025, stayed a few nights. "Had an absolutely perfect stay. The home is spotless and feels like a luxury hotel room. Can't recommend enough!"</span>
       </div>
 
       <div class="review-card reveal">
-        <img src="assets/reviews/review-02.jpg" alt="Airbnb screenshot: Kevin, Nairobi, five-star review May 2026 — 'The apartment was sparkling clean'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
-        <blockquote>
-          <p>"The apartment was sparkling clean and she was available to support on everything I needed during the stay. Will definitely book again!"</p>
-          <footer><cite>Kevin</cite> · May 2026 · Nairobi, Kenya</footer>
-        </blockquote>
+        <img src="assets/reviews/review-02.jpg" alt="Airbnb screenshot: Kevin, Nairobi, five-star review May 2026 — The apartment was sparkling clean" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <span class="review-text-hidden">Kevin, Nairobi Kenya, May 2026, stayed a few nights. "The apartment was sparkling clean and she was available to support on everything I needed during the stay. Will definitely book again!"</span>
       </div>
 
       <div class="review-card reveal">
-        <img src="assets/reviews/review-03.jpg" alt="Airbnb screenshot: Nurul, 11 years on Airbnb, five-star review March 2025 — 'I also appreciated the regular cleaning service'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
-        <blockquote>
-          <p>"This was hands down the best Airbnb experience I've had in my 10 years on the platform. I also appreciated the regular cleaning service, which made the stay feel even more comfortable and hassle-free."</p>
-          <footer><cite>Nurul</cite> · March 2025 · 11 years on Airbnb</footer>
-        </blockquote>
+        <img src="assets/reviews/review-03.jpg" alt="Airbnb screenshot: Nurul, 11 years on Airbnb, five-star review March 2025 — I also appreciated the regular cleaning service" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <span class="review-text-hidden">Nurul, 11 years on Airbnb, March 2025, stayed a few nights. "This was hands down the best Airbnb experience I've had in my 10 years on the platform. I also appreciated the regular cleaning service, which made the stay feel even more comfortable and hassle-free."</span>
       </div>
 
       <div class="review-card reveal">
-        <img src="assets/reviews/review-04.jpg" alt="Airbnb screenshot: Tweheyo, five-star review July 2025 — 'The apartment is clean, lovely and spacious and Grace has a lovely team'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
-        <blockquote>
-          <p>"The apartment is clean, lovely and spacious and Grace has a lovely team that are always ready to clean up upon request. We had a lovely stay!!"</p>
-          <footer><cite>Tweheyo</cite> · July 2025 · Stayed a few nights</footer>
-        </blockquote>
+        <img src="assets/reviews/review-04.jpg" alt="Airbnb screenshot: Tweheyo, five-star review July 2025 — The apartment is clean, lovely and spacious and Grace has a lovely team always ready to clean" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <span class="review-text-hidden">Tweheyo, 1 year on Airbnb, July 2025, stayed a few nights. "The apartment is clean, lovely and spacious and Grace has a lovely team that are always ready to clean up upon request. We had a lovely stay!!"</span>
       </div>
 
       <div class="review-card reveal">
-        <img src="assets/reviews/review-05.jpg" alt="Airbnb screenshot: Fuad, Toronto, five-star review February 2025 — 'The apartment itself was clean, well-equipped, and perfectly suited for a family stay'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
-        <blockquote>
-          <p>"The apartment itself was clean, well-equipped, and perfectly suited for a family stay. A big highlight was Kristy, the wonderful maid who came every 2–3 days. She was flexible, professional, and an absolute gem."</p>
-          <footer><cite>Fuad</cite> · February 2025 · Toronto, Canada · Stayed with kids</footer>
-        </blockquote>
+        <img src="assets/reviews/review-05.jpg" alt="Airbnb screenshot: Fuad, Toronto Canada, five-star review February 2025 — The apartment was clean and the maid Kristy came every 2-3 days" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <span class="review-text-hidden">Fuad, Toronto Canada, February 2025, stayed with kids. "The apartment itself was clean, well-equipped, and perfectly suited for a family stay. A big highlight was Kristy, the wonderful maid who came every 2-3 days based on our availability. She was flexible, professional, and an absolute gem."</span>
       </div>
 
       <div class="review-card reveal">
-        <img src="assets/reviews/review-06.jpg" alt="Airbnb screenshot: Reuben, Austin Texas, five-star review March 2026 — 'The house was spotless'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
-        <blockquote>
-          <p>"This place was absolutely wonderful! Great big house, great host and incredibly helpful. The house was spotless."</p>
-          <footer><cite>Reuben</cite> · March 2026 · Austin, Texas · Stayed a few nights</footer>
-        </blockquote>
+        <img src="assets/reviews/review-06.jpg" alt="Airbnb screenshot: Reuben, Austin Texas, five-star review March 2026 — The house was spotless" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <span class="review-text-hidden">Reuben, Austin Texas, March 2026, stayed a few nights. "This place was absolutely wonderful! Great big house, great host and incredibly helpful. The house was spotless."</span>
       </div>
 
       <div class="review-card reveal">
-        <img src="assets/reviews/review-07.jpg" alt="Airbnb screenshot: Bernice, 3 years on Airbnb, five-star review December 2023 — 'the place was impeccably clean'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
-        <blockquote>
-          <p>"I had an incredible stay. Cindy's hospitality was unmatched, creating a warm and welcoming atmosphere. Moreover, the place was impeccably clean, adding to the overall comfort of my stay. Highly recommend this gem."</p>
-          <footer><cite>Bernice</cite> · December 2023 · Stayed one night</footer>
-        </blockquote>
+        <img src="assets/reviews/review-07.jpg" alt="Airbnb screenshot: Bernice, 3 years on Airbnb, five-star review December 2023 — The place was impeccably clean" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <span class="review-text-hidden">Bernice, 3 years on Airbnb, December 2023, stayed one night. "I had an incredible stay. Cindy's hospitality was unmatched, creating a warm and welcoming atmosphere. Moreover, the place was impeccably clean, adding to the overall comfort of my stay. Highly recommend this gem."</span>
       </div>
 
       <div class="review-card reveal">
-        <img src="assets/reviews/review-08.jpg" alt="Airbnb screenshot: Sylvia, 5 years on Airbnb, five-star review October 2024 — 'The apartment was spotless, and the beds were incredibly comfortable'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
-        <blockquote>
-          <p>"I had an amazing stay at Grace's place! The apartment was spotless, and the beds were incredibly comfortable. Highly recommend to anyone looking for a cozy and clean place to stay."</p>
-          <footer><cite>Sylvia</cite> · October 2024 · Stayed with kids</footer>
-        </blockquote>
+        <img src="assets/reviews/review-08.jpg" alt="Airbnb screenshot: Sylvia, 5 years on Airbnb, five-star review October 2024 — The apartment was spotless and the beds were incredibly comfortable" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <span class="review-text-hidden">Sylvia, 5 years on Airbnb, October 2024, stayed with kids. "I had an amazing stay at Grace's place! The apartment was spotless, and the beds were incredibly comfortable. Highly recommend to anyone looking for a cozy and clean place to stay."</span>
       </div>
 
       <div class="review-card reveal">
-        <img src="assets/reviews/review-09.jpg" alt="Airbnb screenshot: Maurine, 3 years on Airbnb, five-star review January 2024 — 'the place is also extremely clean and clutter free'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
-        <blockquote>
-          <p>"The place is also extremely clean and clutter free!"</p>
-          <footer><cite>Maurine</cite> · January 2024 · Stayed one night</footer>
-        </blockquote>
+        <img src="assets/reviews/review-09.jpg" alt="Airbnb screenshot: Maurine, 3 years on Airbnb, five-star review January 2024 — The place is extremely clean and clutter free" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <span class="review-text-hidden">Maurine, 3 years on Airbnb, January 2024, stayed one night. "The place is also extremely clean and clutter free!"</span>
       </div>
 
       <div class="review-card reveal">
-        <img src="assets/reviews/review-10.jpg" alt="Airbnb screenshot: Cj, Los Angeles, five-star review November 2023 — 'I felt clean, relaxed, and inspired everyday of my stay'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
-        <blockquote>
-          <p>"10/10!! Cindy has curated a beautiful and open space — I felt clean, relaxed, and inspired every day of my stay."</p>
-          <footer><cite>Cj</cite> · November 2023 · Los Angeles, California · Stayed a few nights</footer>
-        </blockquote>
+        <img src="assets/reviews/review-10.jpg" alt="Airbnb screenshot: Cj, Los Angeles California, five-star review November 2023 — I felt clean, relaxed, and inspired every day of my stay" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <span class="review-text-hidden">Cj, Los Angeles California, November 2023, stayed a few nights. "10/10!! Cindy has curated a beautiful and open space — I felt clean, relaxed, and inspired every day of my stay."</span>
       </div>
 
       <div class="review-card reveal">
-        <img src="assets/reviews/review-11.jpg" alt="Airbnb screenshot: James, 7 years on Airbnb, five-star review December 2023 — 'rooms were not only spacious but also elegant, vibrant, and impeccably clean'" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
-        <blockquote>
-          <p>"Our experience at Cindy's residence was superb. The rooms were not only spacious but also elegant, vibrant, and impeccably clean. Our hostess went above and beyond, even when we required assistance beyond regular hours. Highly recommended!"</p>
-          <footer><cite>James</cite> · December 2023 · 7 years on Airbnb · Stayed one night</footer>
-        </blockquote>
+        <img src="assets/reviews/review-11.jpg" alt="Airbnb screenshot: James, 7 years on Airbnb, five-star review December 2023 — The rooms were not only spacious but also elegant, vibrant, and impeccably clean" loading="lazy" onerror="this.closest('.review-card').style.display='none'">
+        <span class="review-text-hidden">James, 7 years on Airbnb, December 2023, stayed one night. "Our experience at Cindy's residence was superb. The rooms were not only spacious but also elegant, vibrant, and impeccably clean. Our hostess went above and beyond, even when we required assistance beyond regular hours. Highly recommended!"</span>
       </div>
 
     </div>
